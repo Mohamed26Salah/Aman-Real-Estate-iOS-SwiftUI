@@ -12,6 +12,7 @@ extension SystemDesign {
     enum AppImages: String {
         case BackDoor, FrontDoor, SmallStar, BigStar
         case DoorKnob, SplashImage
+        case FirstHouseOnBoarding, SecondHouseOnBoarding, ThirdHouseOnBoarding
         
         
         //return name of image

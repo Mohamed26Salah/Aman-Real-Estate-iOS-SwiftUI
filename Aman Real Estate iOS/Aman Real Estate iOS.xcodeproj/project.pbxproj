@@ -13,6 +13,9 @@
 		AB6236752B24AB7D0090F9C0 /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6236742B24AB7D0090F9C0 /* AppFonts.swift */; };
 		AB6236782B24B4680090F9C0 /* SplashScreenAnimated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6236772B24B4680090F9C0 /* SplashScreenAnimated.swift */; };
 		AB62367A2B24BC0A0090F9C0 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6236792B24BC0A0090F9C0 /* ContainerView.swift */; };
+		AB62367C2B24C6260090F9C0 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB62367B2B24C6260090F9C0 /* OnBoardingView.swift */; };
+		AB62367F2B24D8E10090F9C0 /* View +  Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB62367E2B24D8E10090F9C0 /* View +  Extenstions.swift */; };
+		AB6236812B24E5D80090F9C0 /* StorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6236802B24E5D80090F9C0 /* StorageKeys.swift */; };
 		ABE56D592B220B2D0049083C /* Aman_Real_Estate_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE56D582B220B2D0049083C /* Aman_Real_Estate_iOSApp.swift */; };
 		ABE56D5B2B220B2D0049083C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE56D5A2B220B2D0049083C /* ContentView.swift */; };
 		ABE56D5D2B220B2D0049083C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE56D5C2B220B2D0049083C /* Assets.xcassets */; };
@@ -54,6 +57,9 @@
 		AB6236742B24AB7D0090F9C0 /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
 		AB6236772B24B4680090F9C0 /* SplashScreenAnimated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenAnimated.swift; sourceTree = "<group>"; };
 		AB6236792B24BC0A0090F9C0 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		AB62367B2B24C6260090F9C0 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		AB62367E2B24D8E10090F9C0 /* View +  Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View +  Extenstions.swift"; sourceTree = "<group>"; };
+		AB6236802B24E5D80090F9C0 /* StorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKeys.swift; sourceTree = "<group>"; };
 		ABE56D552B220B2D0049083C /* Aman Real Estate iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aman Real Estate iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE56D582B220B2D0049083C /* Aman_Real_Estate_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aman_Real_Estate_iOSApp.swift; sourceTree = "<group>"; };
 		ABE56D5A2B220B2D0049083C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,12 +116,21 @@
 			path = SystemDesign;
 			sourceTree = "<group>";
 		};
-		AB6236762B24B4320090F9C0 /* SplashScreenCycle */ = {
+		AB6236762B24B4320090F9C0 /* OnBoardingCycle */ = {
 			isa = PBXGroup;
 			children = (
 				AB6236772B24B4680090F9C0 /* SplashScreenAnimated.swift */,
+				AB62367B2B24C6260090F9C0 /* OnBoardingView.swift */,
 			);
-			path = SplashScreenCycle;
+			path = OnBoardingCycle;
+			sourceTree = "<group>";
+		};
+		AB62367D2B24D8D10090F9C0 /* Extenstions */ = {
+			isa = PBXGroup;
+			children = (
+				AB62367E2B24D8E10090F9C0 /* View +  Extenstions.swift */,
+			);
+			path = Extenstions;
 			sourceTree = "<group>";
 		};
 		ABE56D4C2B220B2D0049083C = {
@@ -182,6 +197,7 @@
 		ABE56D822B220C300049083C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AB62367D2B24D8D10090F9C0 /* Extenstions */,
 				AB62366C2B249E8E0090F9C0 /* SystemDesign */,
 			);
 			path = Resources;
@@ -200,7 +216,7 @@
 		ABE56D842B220C3D0049083C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				AB6236762B24B4320090F9C0 /* SplashScreenCycle */,
+				AB6236762B24B4320090F9C0 /* OnBoardingCycle */,
 				ABE56D852B220C480049083C /* AuthCycle */,
 			);
 			path = Scenes;
@@ -235,6 +251,7 @@
 		ABE56D882B220C6B0049083C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AB6236802B24E5D80090F9C0 /* StorageKeys.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -410,10 +427,13 @@
 			files = (
 				AB6236722B249FC30090F9C0 /* AppColors.swift in Sources */,
 				ABE56D5B2B220B2D0049083C /* ContentView.swift in Sources */,
+				AB62367F2B24D8E10090F9C0 /* View +  Extenstions.swift in Sources */,
 				AB6236702B249EC10090F9C0 /* AppImages.swift in Sources */,
+				AB6236812B24E5D80090F9C0 /* StorageKeys.swift in Sources */,
 				AB62366E2B249EA00090F9C0 /* SystemDesign.swift in Sources */,
 				ABE56D592B220B2D0049083C /* Aman_Real_Estate_iOSApp.swift in Sources */,
 				AB6236782B24B4680090F9C0 /* SplashScreenAnimated.swift in Sources */,
+				AB62367C2B24C6260090F9C0 /* OnBoardingView.swift in Sources */,
 				ABE56D9D2B222FFF0049083C /* Coordinator.swift in Sources */,
 				AB6236752B24AB7D0090F9C0 /* AppFonts.swift in Sources */,
 				AB62367A2B24BC0A0090F9C0 /* ContainerView.swift in Sources */,

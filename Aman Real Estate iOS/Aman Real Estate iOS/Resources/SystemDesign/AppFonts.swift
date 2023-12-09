@@ -103,10 +103,10 @@ public enum LabelStyle {
 }
 
 extension Text {
-    func applyLabelStyle(style: LabelStyle, text: String? = nil) -> Text {
+    func applyLabelStyle(style: LabelStyle, text: String? = nil, color: Color = .black) -> Text {
         self
             .font(style.font)
-            .foregroundColor(style.color)
+            .foregroundColor(color)
     }
     
     func setUnderlinedText(_ text: String, font: Font, color: Color) -> Text {
