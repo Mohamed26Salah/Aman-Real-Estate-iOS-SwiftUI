@@ -45,6 +45,7 @@ struct SplashScreenAnimated: View {
         }
         .opacity(opacity)
         .onAppear {
+            print(UIFont.familyNames)
             withAnimation(.easeInOut(duration: 0.8)) {
                 isRotated = true
                 starsOpacity = 0.0

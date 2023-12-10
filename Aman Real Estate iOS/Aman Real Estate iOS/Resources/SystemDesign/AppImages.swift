@@ -13,7 +13,7 @@ extension SystemDesign {
         case BackDoor, FrontDoor, SmallStar, BigStar
         case DoorKnob, SplashImage
         case FirstHouseOnBoarding, SecondHouseOnBoarding, ThirdHouseOnBoarding
-        
+        case eg
         
         //return name of image
         var name: String {

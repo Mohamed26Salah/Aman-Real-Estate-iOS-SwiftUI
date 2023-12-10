@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB31BE192B25FFF4004D3915 /* SF-Pro-Display-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABD739162B25F425001D2CBF /* SF-Pro-Display-Bold.ttf */; };
+		AB31BE1D2B262479004D3915 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB31BE1C2B262479004D3915 /* CustomTextField.swift */; };
 		AB62366E2B249EA00090F9C0 /* SystemDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB62366D2B249EA00090F9C0 /* SystemDesign.swift */; };
 		AB6236702B249EC10090F9C0 /* AppImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB62366F2B249EC10090F9C0 /* AppImages.swift */; };
 		AB6236722B249FC30090F9C0 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6236712B249FC30090F9C0 /* AppColors.swift */; };
@@ -16,6 +18,8 @@
 		AB62367C2B24C6260090F9C0 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB62367B2B24C6260090F9C0 /* OnBoardingView.swift */; };
 		AB62367F2B24D8E10090F9C0 /* View +  Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB62367E2B24D8E10090F9C0 /* View +  Extenstions.swift */; };
 		AB6236812B24E5D80090F9C0 /* StorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6236802B24E5D80090F9C0 /* StorageKeys.swift */; };
+		ABD739062B25E800001D2CBF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD739052B25E800001D2CBF /* LoginView.swift */; };
+		ABD7391A2B25F45B001D2CBF /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABD739192B25F45B001D2CBF /* Storyboard.storyboard */; };
 		ABE56D592B220B2D0049083C /* Aman_Real_Estate_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE56D582B220B2D0049083C /* Aman_Real_Estate_iOSApp.swift */; };
 		ABE56D5B2B220B2D0049083C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE56D5A2B220B2D0049083C /* ContentView.swift */; };
 		ABE56D5D2B220B2D0049083C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE56D5C2B220B2D0049083C /* Assets.xcassets */; };
@@ -31,6 +35,9 @@
 		ABE56D9D2B222FFF0049083C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE56D9C2B222FFF0049083C /* Coordinator.swift */; };
 		ABE56D9F2B2238050049083C /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE56D9E2B2238050049083C /* AuthCoordinator.swift */; };
 		ABE56DA12B22458E0049083C /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE56DA02B22458E0049083C /* ContentView2.swift */; };
+		ABEA753E2B25FC9A004C9BAD /* SF-Pro-Display-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABD739172B25F425001D2CBF /* SF-Pro-Display-Medium.ttf */; };
+		ABEA753F2B25FC9D004C9BAD /* SF-Pro-Display-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABD739152B25F425001D2CBF /* SF-Pro-Display-Regular.ttf */; };
+		ABEA75402B25FCA1004C9BAD /* SF-Pro-Display-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABD739182B25F425001D2CBF /* SF-Pro-Display-Semibold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB31BE1A2B260040004D3915 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		AB31BE1C2B262479004D3915 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		AB62366D2B249EA00090F9C0 /* SystemDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemDesign.swift; sourceTree = "<group>"; };
 		AB62366F2B249EC10090F9C0 /* AppImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImages.swift; sourceTree = "<group>"; };
 		AB6236712B249FC30090F9C0 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
@@ -60,6 +69,13 @@
 		AB62367B2B24C6260090F9C0 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		AB62367E2B24D8E10090F9C0 /* View +  Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View +  Extenstions.swift"; sourceTree = "<group>"; };
 		AB6236802B24E5D80090F9C0 /* StorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKeys.swift; sourceTree = "<group>"; };
+		ABD739052B25E800001D2CBF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		ABD739072B25ED21001D2CBF /* Aman-Real-Estate-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Aman-Real-Estate-iOS-Info.plist"; sourceTree = SOURCE_ROOT; };
+		ABD739152B25F425001D2CBF /* SF-Pro-Display-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.ttf"; sourceTree = "<group>"; };
+		ABD739162B25F425001D2CBF /* SF-Pro-Display-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.ttf"; sourceTree = "<group>"; };
+		ABD739172B25F425001D2CBF /* SF-Pro-Display-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.ttf"; sourceTree = "<group>"; };
+		ABD739182B25F425001D2CBF /* SF-Pro-Display-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.ttf"; sourceTree = "<group>"; };
+		ABD739192B25F45B001D2CBF /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		ABE56D552B220B2D0049083C /* Aman Real Estate iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aman Real Estate iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE56D582B220B2D0049083C /* Aman_Real_Estate_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aman_Real_Estate_iOSApp.swift; sourceTree = "<group>"; };
 		ABE56D5A2B220B2D0049083C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,6 +121,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB31BE1B2B26246A004D3915 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				AB31BE1C2B262479004D3915 /* CustomTextField.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
 		AB62366C2B249E8E0090F9C0 /* SystemDesign */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +145,7 @@
 			children = (
 				AB6236772B24B4680090F9C0 /* SplashScreenAnimated.swift */,
 				AB62367B2B24C6260090F9C0 /* OnBoardingView.swift */,
+				ABD739192B25F45B001D2CBF /* Storyboard.storyboard */,
 			);
 			path = OnBoardingCycle;
 			sourceTree = "<group>";
@@ -131,6 +156,18 @@
 				AB62367E2B24D8E10090F9C0 /* View +  Extenstions.swift */,
 			);
 			path = Extenstions;
+			sourceTree = "<group>";
+		};
+		ABD739082B25ED51001D2CBF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AB31BE1A2B260040004D3915 /* Roboto-Bold.ttf */,
+				ABD739162B25F425001D2CBF /* SF-Pro-Display-Bold.ttf */,
+				ABD739172B25F425001D2CBF /* SF-Pro-Display-Medium.ttf */,
+				ABD739152B25F425001D2CBF /* SF-Pro-Display-Regular.ttf */,
+				ABD739182B25F425001D2CBF /* SF-Pro-Display-Semibold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		ABE56D4C2B220B2D0049083C = {
@@ -156,6 +193,7 @@
 		ABE56D572B220B2D0049083C /* Aman Real Estate iOS */ = {
 			isa = PBXGroup;
 			children = (
+				ABD739072B25ED21001D2CBF /* Aman-Real-Estate-iOS-Info.plist */,
 				ABE56D9B2B222FDB0049083C /* Coordinator */,
 				ABE56D832B220C360049083C /* Base */,
 				ABE56D842B220C3D0049083C /* Scenes */,
@@ -197,6 +235,7 @@
 		ABE56D822B220C300049083C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ABD739082B25ED51001D2CBF /* Fonts */,
 				AB62367D2B24D8D10090F9C0 /* Extenstions */,
 				AB62366C2B249E8E0090F9C0 /* SystemDesign */,
 			);
@@ -235,6 +274,7 @@
 		ABE56D862B220C550049083C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AB31BE1B2B26246A004D3915 /* Custom */,
 				ABE56D992B2216980049083C /* CoordinatorView.swift */,
 				AB6236792B24BC0A0090F9C0 /* ContainerView.swift */,
 			);
@@ -259,6 +299,7 @@
 		ABE56D892B220CB90049083C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ABD739052B25E800001D2CBF /* LoginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -399,8 +440,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABEA75402B25FCA1004C9BAD /* SF-Pro-Display-Semibold.ttf in Resources */,
+				ABEA753F2B25FC9D004C9BAD /* SF-Pro-Display-Regular.ttf in Resources */,
+				ABEA753E2B25FC9A004C9BAD /* SF-Pro-Display-Medium.ttf in Resources */,
 				ABE56D602B220B2D0049083C /* Preview Assets.xcassets in Resources */,
 				ABE56D5D2B220B2D0049083C /* Assets.xcassets in Resources */,
+				ABD7391A2B25F45B001D2CBF /* Storyboard.storyboard in Resources */,
+				AB31BE192B25FFF4004D3915 /* SF-Pro-Display-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,12 +479,14 @@
 				AB62366E2B249EA00090F9C0 /* SystemDesign.swift in Sources */,
 				ABE56D592B220B2D0049083C /* Aman_Real_Estate_iOSApp.swift in Sources */,
 				AB6236782B24B4680090F9C0 /* SplashScreenAnimated.swift in Sources */,
+				AB31BE1D2B262479004D3915 /* CustomTextField.swift in Sources */,
 				AB62367C2B24C6260090F9C0 /* OnBoardingView.swift in Sources */,
 				ABE56D9D2B222FFF0049083C /* Coordinator.swift in Sources */,
 				AB6236752B24AB7D0090F9C0 /* AppFonts.swift in Sources */,
 				AB62367A2B24BC0A0090F9C0 /* ContainerView.swift in Sources */,
 				ABE56DA12B22458E0049083C /* ContentView2.swift in Sources */,
 				ABE56D9F2B2238050049083C /* AuthCoordinator.swift in Sources */,
+				ABD739062B25E800001D2CBF /* LoginView.swift in Sources */,
 				ABE56D9A2B2216980049083C /* CoordinatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -606,6 +654,7 @@
 				DEVELOPMENT_TEAM = 3Q8FDFK3WX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Aman-Real-Estate-iOS-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -635,6 +684,7 @@
 				DEVELOPMENT_TEAM = 3Q8FDFK3WX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Aman-Real-Estate-iOS-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

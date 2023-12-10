@@ -9,10 +9,10 @@ import SwiftUI
 
 extension Font {
     public enum SFProDisplay: String {
-        case regular = "SFProDisplay-Regular"
-        case medium = "SFProDisplay-Medium"
-        case semibold = "SFProDisplay-Semibold"
-        case bold = "SFProDisplay-Bold"
+        case regular = "SF Pro Display Regular"
+        case medium = "SF Pro Display Medium"
+        case semibold = "SF Pro Display Semibold"
+        case bold = "SF Pro Display Bold"
         
         public var name: String {
             return self.rawValue
@@ -60,38 +60,38 @@ public enum LabelStyle {
 
     var font: Font {
         switch self {
-        case .Heading1: return .custom("SFProDisplay-Bold", size: 40)
-        case .Heading2: return .custom("SFProDisplay-Bold", size: 32)
-        case .Heading3: return .custom("SFProDisplay-Bold", size: 24)
-        case .Heading4: return .custom("SFProDisplay-Bold", size: 20)
-        case .Heading5: return .custom("SFProDisplay-Bold", size: 18)
-        case .Heading6: return .custom("SFProDisplay-Bold", size: 16)
+        case .Heading1: return .custom("SF Pro Display Bold", size: 40)
+        case .Heading2: return .custom("SF Pro Display Bold", size: 32)
+        case .Heading3: return .custom("SF Pro Display Bold", size: 24)
+        case .Heading4: return .custom("SF Pro Display Bold", size: 20)
+        case .Heading5: return .custom("SF Pro Display Bold", size: 18)
+        case .Heading6: return .custom("SF Pro Display Bold", size: 16)
             
-        case .BodyXLargeBold: return .custom("SFProDisplay-Bold", size: 18)
-        case .BodyXLargeSemiBold: return .custom("SFProDisplay-Semibold", size: 18)
-        case .BodyXLargeMedium: return .custom("SFProDisplay-Medium", size: 18)
-        case .BodyXLargeRegular: return .custom("SFProDisplay-Regular", size: 18)
+        case .BodyXLargeBold: return .custom("SF Pro Display Bold", size: 18)
+        case .BodyXLargeSemiBold: return .custom("SF Pro Display Semibold", size: 18)
+        case .BodyXLargeMedium: return .custom("SF Pro Display Medium", size: 18)
+        case .BodyXLargeRegular: return .custom("SF Pro Display Regular", size: 18)
             
             
-        case .BodyLargeBold: return .custom("SFProDisplay-Bold", size: 16)
-        case .BodyLargeSemiBold: return .custom("SFProDisplay-SemiBold", size: 16)
-        case .BodyLargeMedium: return .custom("SFProDisplay-Medium", size: 16)
-        case .BodyLargeRegular: return .custom("SFProDisplay-Regular", size: 16)
+        case .BodyLargeBold: return .custom("SF Pro Display Bold", size: 16)
+        case .BodyLargeSemiBold: return .custom("SF Pro Display Semibold", size: 16)
+        case .BodyLargeMedium: return .custom("SF Pro Display Medium", size: 16)
+        case .BodyLargeRegular: return .custom("SF Pro Display Regular", size: 16)
             
-        case .BodyMediumBold: return .custom("SFProDisplay-Bold", size: 14)
-        case .BodyMediumSemiBold: return .custom("SFProDisplay-SemiBold", size: 14)
-        case .BodyMediumMedium: return .custom("SFProDisplay-Medium", size: 14)
-        case .BodyMediumRegular: return .custom("SFProDisplay-Regular", size: 14)
+        case .BodyMediumBold: return .custom("SF Pro Display Bold", size: 14)
+        case .BodyMediumSemiBold: return .custom("SF Pro Display Semibold", size: 14)
+        case .BodyMediumMedium: return .custom("SF Pro Display Medium", size: 14)
+        case .BodyMediumRegular: return .custom("SF Pro Display Regular", size: 14)
             
-        case .BodySmallBold: return .custom("SFProDisplay-Bold", size: 12)
-        case .BodySmallSemiBold: return .custom("SFProDisplay-SemiBold", size: 12)
-        case .BodySmallMedium: return .custom("SFProDisplay-Medium", size: 12)
-        case .BodySmallRegular: return .custom("SFProDisplay-Regular", size: 12)
+        case .BodySmallBold: return .custom("SF Pro Display Bold", size: 12)
+        case .BodySmallSemiBold: return .custom("SF Pro Display Semibold", size: 12)
+        case .BodySmallMedium: return .custom("SF Pro Display Medium", size: 12)
+        case .BodySmallRegular: return .custom("SF Pro Display Regular", size: 12)
             
-        case .BodyXSmallBold: return .custom("SFProDisplay-Bold", size: 10)
-        case .BodyXSmallSemiBold: return .custom("SFProDisplay-SemiBold", size: 10)
-        case .BodyXSmallMedium: return .custom("SFProDisplay-Medium", size: 10)
-        case .BodyXSmallRegular: return .custom("SFProDisplay-Regular", size: 10)
+        case .BodyXSmallBold: return .custom("SF Pro Display Bold", size: 10)
+        case .BodyXSmallSemiBold: return .custom("SF Pro Display Semibold", size: 10)
+        case .BodyXSmallMedium: return .custom("SF Pro Display Medium", size: 10)
+        case .BodyXSmallRegular: return .custom("SF Pro Display Regular", size: 10)
         }
     }
 
