@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AB31BE192B25FFF4004D3915 /* SF-Pro-Display-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABD739162B25F425001D2CBF /* SF-Pro-Display-Bold.ttf */; };
 		AB31BE1D2B262479004D3915 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB31BE1C2B262479004D3915 /* CustomTextField.swift */; };
+		AB31BE242B269B99004D3915 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB31BE232B269B99004D3915 /* RegisterView.swift */; };
 		AB62366E2B249EA00090F9C0 /* SystemDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB62366D2B249EA00090F9C0 /* SystemDesign.swift */; };
 		AB6236702B249EC10090F9C0 /* AppImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB62366F2B249EC10090F9C0 /* AppImages.swift */; };
 		AB6236722B249FC30090F9C0 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6236712B249FC30090F9C0 /* AppColors.swift */; };
@@ -60,6 +61,7 @@
 /* Begin PBXFileReference section */
 		AB31BE1A2B260040004D3915 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		AB31BE1C2B262479004D3915 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		AB31BE232B269B99004D3915 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		AB62366D2B249EA00090F9C0 /* SystemDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemDesign.swift; sourceTree = "<group>"; };
 		AB62366F2B249EC10090F9C0 /* AppImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImages.swift; sourceTree = "<group>"; };
 		AB6236712B249FC30090F9C0 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
@@ -127,6 +129,48 @@
 				AB31BE1C2B262479004D3915 /* CustomTextField.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		AB31BE1E2B269B4F004D3915 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				ABE56D8B2B220CC40049083C /* Model */,
+				ABE56D8A2B220CBE0049083C /* ViewModel */,
+				ABE56D892B220CB90049083C /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		AB31BE1F2B269B69004D3915 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				AB31BE222B269B89004D3915 /* Model */,
+				AB31BE212B269B83004D3915 /* ViewModel */,
+				AB31BE202B269B7E004D3915 /* View */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		AB31BE202B269B7E004D3915 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AB31BE232B269B99004D3915 /* RegisterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AB31BE212B269B83004D3915 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AB31BE222B269B89004D3915 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		AB62366C2B249E8E0090F9C0 /* SystemDesign */ = {
@@ -264,9 +308,8 @@
 		ABE56D852B220C480049083C /* AuthCycle */ = {
 			isa = PBXGroup;
 			children = (
-				ABE56D8B2B220CC40049083C /* Model */,
-				ABE56D8A2B220CBE0049083C /* ViewModel */,
-				ABE56D892B220CB90049083C /* View */,
+				AB31BE1E2B269B4F004D3915 /* Login */,
+				AB31BE1F2B269B69004D3915 /* Register */,
 			);
 			path = AuthCycle;
 			sourceTree = "<group>";
@@ -480,6 +523,7 @@
 				ABE56D592B220B2D0049083C /* Aman_Real_Estate_iOSApp.swift in Sources */,
 				AB6236782B24B4680090F9C0 /* SplashScreenAnimated.swift in Sources */,
 				AB31BE1D2B262479004D3915 /* CustomTextField.swift in Sources */,
+				AB31BE242B269B99004D3915 /* RegisterView.swift in Sources */,
 				AB62367C2B24C6260090F9C0 /* OnBoardingView.swift in Sources */,
 				ABE56D9D2B222FFF0049083C /* Coordinator.swift in Sources */,
 				AB6236752B24AB7D0090F9C0 /* AppFonts.swift in Sources */,

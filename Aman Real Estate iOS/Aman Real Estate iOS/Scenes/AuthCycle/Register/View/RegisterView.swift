@@ -1,30 +1,48 @@
 //
-//  LoginView.swift
+//  RegisterView.swift
 //  Aman Real Estate iOS
 //
-//  Created by Mohamed Salah on 10/12/2023.
+//  Created by Mohamed Salah on 11/12/2023.
 //
 
 import SwiftUI
 
-struct LoginView: View {
+struct RegisterView: View {
     @State var email: String = ""
     @State var emailBorderError: Bool = false
     @State var isFormValidated: Bool = false
+    @State var aggreedOnTerms: Bool = false
     var body: some View {
         VStack(spacing: 16) {
             HStack {
-                Text("Let's Login")
+                Text("Sign Up")
                     .applyLabelStyle(style: .Heading3, color: .neutrals900)
-                    
+                
                 Spacer()
+            }
+            HStack {
+                Text("Full Name")
+                    .applyLabelStyle(style: .BodyMediumMedium, color: .neutrals900)
+                Spacer()
+            }
+            .padding(.top, 8)
+            HStack() {
+                CustomTextField(
+                    keyboardContentType: .name,
+                    keyboardType: .default,
+                    hint: "Enter Full Name",
+                    hintStyle: .BodyMediumRegular,
+                    hintColor: .neutrals600,
+                    backgroundColor: SystemDesign.AppColors.Neutrals100.color,
+                    cornerRadius: 8,
+                    text: $email,
+                    isTheirAnError: $emailBorderError)
             }
             HStack {
                 Text("Phone Number")
                     .applyLabelStyle(style: .BodyMediumMedium, color: .neutrals900)
                 Spacer()
             }
-            .padding(.top, 8)
             HStack(spacing: 16) {
                 HStack {
                     Image(SystemDesign.AppImages.eg.name)
@@ -49,7 +67,7 @@ struct LoginView: View {
                     isTheirAnError: $emailBorderError)
             }
             HStack {
-                Text("Phone Number")
+                Text("Email Address")
                     .applyLabelStyle(style: .BodyMediumMedium, color: .neutrals900)
                 Spacer()
             }
@@ -66,30 +84,51 @@ struct LoginView: View {
                     text: $email,
                     isTheirAnError: $emailBorderError)
             }
-            HStack {
-                Spacer()
-                Text("ForgotPassword?")
-                    .applyLabelStyle(style: .BodyMediumMedium, color: .blue500)
+            HStack(spacing: 3) {
+                Text("I agree with")
+                    .applyLabelStyle(style: .BodyMediumRegular, color: .neutrals900)
+                
+                Button(action: {
+                    
+                }) {
+                    Text("Term of Conditions")
+                        .applyLabelStyle(style: .BodyMediumRegular, color: .blue500)
+                }
+                
+                Text("and")
+                    .applyLabelStyle(style: .BodyMediumRegular, color: .neutrals900)
+                
+                Button(action: {
+                    
+                }) {
+                    Text("Privacy Policy")
+                        .applyLabelStyle(style: .BodyMediumRegular, color: .blue500)
+                }
+                Toggle("", isOn: $aggreedOnTerms)
+                    .toggleStyle(SwitchToggleStyle(tint: SystemDesign.AppColors.Blue500.color))
+                    .labelsHidden()
+                    .padding(.leading, 5)
             }
+            Spacer()
             Button(action: {
                 
             }) {
-                Text("Login")
+                Text("Register")
                     .applyLabelStyle(style: .BodyMediumSemiBold, color: .blue50)
                     .padding()
                     .frame(maxWidth: .infinity)
                     .background(isFormValidated ? SystemDesign.AppColors.Blue500.color : SystemDesign.AppColors.Blue200.color)
                     .cornerRadius(8)
-                    
+                
             }
             HStack(spacing: 3) {
                 Spacer()
-                Text("Don’t have an account?")
+                Text("Already have an account?")
                     .applyLabelStyle(style: .BodyMediumRegular, color: .neutrals900)
                 Button(action: {
                     
                 }) {
-                    Text("Sign Up")
+                    Text("Login")
                         .applyLabelStyle(style: .BodyMediumSemiBold, color: .blue500)
                 }
                 Spacer()
@@ -100,10 +139,11 @@ struct LoginView: View {
             // Resign first responder status to close the keyboard
             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
         }
-       
     }
 }
 
 #Preview {
-    LoginView()
+    RegisterView()
 }
+
+
