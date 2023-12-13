@@ -7,19 +7,30 @@
 
 import SwiftUI
 
-enum AuthPage: Identifiable, Hashable {
-    case login, register, forgotPassword
+enum AuthPage: Hashable, Equatable {
+    case login, register, otp
     
-    var id: Self { self }
+//    var id: Self { self }
 }
 
-enum AuthSheet: Identifiable {
-    case termsAndConditions, privacyPolicy
+enum AuthSheet: Identifiable, Equatable {
     
-    var id: Self { self }
+    static func == (lhs: AuthSheet, rhs: AuthSheet) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    case countryCodes(countryCode: Binding<String>)
+    
+    var id: String {
+        switch self {
+        case .countryCodes:
+            return "countryCodes"
+            // Add other cases as needed
+        }
+    }
 }
 
-enum AuthFullScreenCover: Identifiable {
+enum AuthFullScreenCover: Identifiable, Equatable {
     case welcome
     
     var id: Self { self }
@@ -30,21 +41,19 @@ class AuthCoordinator: GenericCoordinator<AuthPage, AuthSheet, AuthFullScreenCov
     func build(page: AuthPage) -> some View {
         switch page {
         case .login:
-            ContentView()
+            LoginView()
         case .register:
-            ContentView2()
-        case .forgotPassword:
-            ContentView()
+            RegisterView()
+        case .otp:
+            RegisterView()
         }
     }
     
     @ViewBuilder
     func build(sheet: AuthSheet) -> some View {
         switch sheet {
-        case .termsAndConditions:
-            ContentView()
-        case .privacyPolicy:
-            ContentView2()
+        case .countryCodes(let countryCode):
+            CountryCodesView(countryCode: countryCode)
         }
     }
     
@@ -52,7 +61,8 @@ class AuthCoordinator: GenericCoordinator<AuthPage, AuthSheet, AuthFullScreenCov
     func build(fullScreenCover: AuthFullScreenCover) -> some View {
         switch fullScreenCover {
         case .welcome:
-            ContentView()
+            RegisterView()
         }
     }
 }
+

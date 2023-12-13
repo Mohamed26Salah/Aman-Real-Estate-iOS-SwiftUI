@@ -12,129 +12,141 @@ struct RegisterView: View {
     @State var emailBorderError: Bool = false
     @State var isFormValidated: Bool = false
     @State var aggreedOnTerms: Bool = false
+    @State var countryCode: String = ""
+    @EnvironmentObject private var coordinator: AuthCoordinator
     var body: some View {
-        VStack(spacing: 16) {
-            HStack {
-                Text("Sign Up")
-                    .applyLabelStyle(style: .Heading3, color: .neutrals900)
-                
-                Spacer()
-            }
-            HStack {
-                Text("Full Name")
-                    .applyLabelStyle(style: .BodyMediumMedium, color: .neutrals900)
-                Spacer()
-            }
-            .padding(.top, 8)
-            HStack() {
-                CustomTextField(
-                    keyboardContentType: .name,
-                    keyboardType: .default,
-                    hint: "Enter Full Name",
-                    hintStyle: .BodyMediumRegular,
-                    hintColor: .neutrals600,
-                    backgroundColor: SystemDesign.AppColors.Neutrals100.color,
-                    cornerRadius: 8,
-                    text: $email,
-                    isTheirAnError: $emailBorderError)
-            }
-            HStack {
-                Text("Phone Number")
-                    .applyLabelStyle(style: .BodyMediumMedium, color: .neutrals900)
-                Spacer()
-            }
-            HStack(spacing: 16) {
+        ScrollView {
+            VStack(spacing: 16) {
                 HStack {
-                    Image(SystemDesign.AppImages.eg.name)
-                        .resizable()
-                        .frame(width: 27, height: 20)
-                    Text("+20")
+                    Text("Sign Up")
+                        .applyLabelStyle(style: .Heading3, color: .neutrals900)
+                    
+                    Spacer()
+                }
+                Image(SystemDesign.AppImages.AppLogoBlue500.name)
+                    .resizable()
+                    .frame(width: 200, height: 200)
+                    .padding(.vertical, -20)
+                HStack {
+                    Text("Full Name")
                         .applyLabelStyle(style: .BodyMediumMedium, color: .neutrals900)
+                    Spacer()
                 }
-                .padding(17)
-                .background(SystemDesign.AppColors.Neutrals100.color)
-                .cornerRadius(8)
-                
-                CustomTextField(
-                    keyboardContentType: .telephoneNumber,
-                    keyboardType: .numberPad,
-                    hint: "Enter Phone Number",
-                    hintStyle: .BodyMediumRegular,
-                    hintColor: .neutrals600,
-                    backgroundColor: SystemDesign.AppColors.Neutrals100.color,
-                    cornerRadius: 8,
-                    text: $email,
-                    isTheirAnError: $emailBorderError)
-            }
-            HStack {
-                Text("Email Address")
-                    .applyLabelStyle(style: .BodyMediumMedium, color: .neutrals900)
-                Spacer()
-            }
-            .padding(.bottom, -4)
-            HStack() {
-                CustomTextField(
-                    keyboardContentType: .emailAddress,
-                    keyboardType: .emailAddress,
-                    hint: "Email",
-                    hintStyle: .BodyMediumRegular,
-                    hintColor: .neutrals600,
-                    backgroundColor: SystemDesign.AppColors.Neutrals100.color,
-                    cornerRadius: 8,
-                    text: $email,
-                    isTheirAnError: $emailBorderError)
-            }
-            HStack(spacing: 3) {
-                Text("I agree with")
-                    .applyLabelStyle(style: .BodyMediumRegular, color: .neutrals900)
-                
-                Button(action: {
-                    
-                }) {
-                    Text("Term of Conditions")
-                        .applyLabelStyle(style: .BodyMediumRegular, color: .blue500)
+                .padding(.top, 8)
+                HStack() {
+                    CustomTextField(
+                        keyboardContentType: .name,
+                        keyboardType: .default,
+                        hint: "Enter Full Name",
+                        hintStyle: .BodyMediumRegular,
+                        hintColor: .neutrals600,
+                        backgroundColor: SystemDesign.AppColors.Neutrals100.color,
+                        cornerRadius: 8,
+                        text: $email,
+                        isTheirAnError: $emailBorderError)
                 }
-                
-                Text("and")
-                    .applyLabelStyle(style: .BodyMediumRegular, color: .neutrals900)
-                
-                Button(action: {
-                    
-                }) {
-                    Text("Privacy Policy")
-                        .applyLabelStyle(style: .BodyMediumRegular, color: .blue500)
+                HStack {
+                    Text("Phone Number")
+                        .applyLabelStyle(style: .BodyMediumMedium, color: .neutrals900)
+                    Spacer()
                 }
-                Toggle("", isOn: $aggreedOnTerms)
-                    .toggleStyle(SwitchToggleStyle(tint: SystemDesign.AppColors.Blue500.color))
-                    .labelsHidden()
-                    .padding(.leading, 5)
-            }
-            Spacer()
-            Button(action: {
-                
-            }) {
-                Text("Register")
-                    .applyLabelStyle(style: .BodyMediumSemiBold, color: .blue50)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(isFormValidated ? SystemDesign.AppColors.Blue500.color : SystemDesign.AppColors.Blue200.color)
+                HStack(spacing: 16) {
+                    HStack {
+                        Image(SystemDesign.AppImages.eg.name)
+                            .resizable()
+                            .frame(width: 27, height: 20)
+                        Text("+20")
+                            .applyLabelStyle(style: .BodyMediumMedium, color: .neutrals900)
+                    }
+                    .padding(17)
+                    .background(SystemDesign.AppColors.Neutrals100.color)
                     .cornerRadius(8)
-                
-            }
-            HStack(spacing: 3) {
+                    .onTapGesture {
+                        coordinator.present(sheet: .countryCodes(countryCode: $countryCode))
+                    }
+                    
+                    CustomTextField(
+                        keyboardContentType: .telephoneNumber,
+                        keyboardType: .numberPad,
+                        hint: "Enter Phone Number",
+                        hintStyle: .BodyMediumRegular,
+                        hintColor: .neutrals600,
+                        backgroundColor: SystemDesign.AppColors.Neutrals100.color,
+                        cornerRadius: 8,
+                        text: $email,
+                        isTheirAnError: $emailBorderError)
+                }
+                HStack {
+                    Text("Email Address")
+                        .applyLabelStyle(style: .BodyMediumMedium, color: .neutrals900)
+                    Spacer()
+                }
+                .padding(.bottom, -4)
+                HStack() {
+                    CustomTextField(
+                        keyboardContentType: .emailAddress,
+                        keyboardType: .emailAddress,
+                        hint: "Email",
+                        hintStyle: .BodyMediumRegular,
+                        hintColor: .neutrals600,
+                        backgroundColor: SystemDesign.AppColors.Neutrals100.color,
+                        cornerRadius: 8,
+                        text: $email,
+                        isTheirAnError: $emailBorderError)
+                }
+                HStack(spacing: 3) {
+                    Text("I agree with")
+                        .applyLabelStyle(style: .BodyMediumRegular, color: .neutrals900)
+                    
+                    Button(action: {
+                        
+                    }) {
+                        Text("Term of Conditions")
+                            .applyLabelStyle(style: .BodyMediumRegular, color: .blue500)
+                    }
+                    
+                    Text("and")
+                        .applyLabelStyle(style: .BodyMediumRegular, color: .neutrals900)
+                    
+                    Button(action: {
+                        
+                    }) {
+                        Text("Privacy Policy")
+                            .applyLabelStyle(style: .BodyMediumRegular, color: .blue500)
+                    }
+                    Toggle("", isOn: $aggreedOnTerms)
+                        .toggleStyle(SwitchToggleStyle(tint: SystemDesign.AppColors.Blue500.color))
+                        .labelsHidden()
+                        .padding(.leading, 5)
+                }
                 Spacer()
-                Text("Already have an account?")
-                    .applyLabelStyle(style: .BodyMediumRegular, color: .neutrals900)
                 Button(action: {
                     
                 }) {
-                    Text("Login")
-                        .applyLabelStyle(style: .BodyMediumSemiBold, color: .blue500)
+                    Text("Register")
+                        .applyLabelStyle(style: .BodyMediumSemiBold, color: .blue50)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(isFormValidated ? SystemDesign.AppColors.Blue500.color : SystemDesign.AppColors.Blue200.color)
+                        .cornerRadius(8)
+                    
                 }
-                Spacer()
+                HStack(spacing: 3) {
+                    Spacer()
+                    Text("Already have an account?")
+                        .applyLabelStyle(style: .BodyMediumRegular, color: .neutrals900)
+                    Button(action: {
+                        coordinator.push(.login)
+                    }) {
+                        Text("Login")
+                            .applyLabelStyle(style: .BodyMediumSemiBold, color: .blue500)
+                    }
+                    Spacer()
+                }
+                .padding(.bottom, 10)
             }
+            .padding(.horizontal, 16)
         }
-        .padding(.horizontal, 16)
         .onTapGesture {
             // Resign first responder status to close the keyboard
             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)

@@ -2,7 +2,7 @@
 
 import SwiftUI
 
-class GenericCoordinator<Page: Identifiable & Hashable, Sheet: Identifiable, FullScreenCover: Identifiable>: ObservableObject {
+class GenericCoordinator<Page: Hashable & Equatable, Sheet: Identifiable & Equatable, FullScreenCover: Identifiable & Equatable>: ObservableObject {
     @Published var path = NavigationPath()
     @Published var sheet: Sheet?
     @Published var fullScreenCover: FullScreenCover?

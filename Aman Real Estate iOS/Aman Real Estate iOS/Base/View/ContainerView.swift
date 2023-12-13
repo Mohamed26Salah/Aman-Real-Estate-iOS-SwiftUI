@@ -19,7 +19,7 @@ struct ContainerView: View {
             if shouldShowOnboarding {
                 OnBoardingView(isPresented: $isOnBoardingViewPresented)
             } else {
-                LoginView()
+                AuthCoordinatorView()
             }
             
         } else {

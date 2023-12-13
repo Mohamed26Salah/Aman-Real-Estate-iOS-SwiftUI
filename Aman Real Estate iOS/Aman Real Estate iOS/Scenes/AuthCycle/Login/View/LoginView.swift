@@ -11,6 +11,8 @@ struct LoginView: View {
     @State var email: String = ""
     @State var emailBorderError: Bool = false
     @State var isFormValidated: Bool = false
+    @EnvironmentObject private var coordinator: AuthCoordinator
+    @State var countryCode: String = ""
     var body: some View {
         VStack(spacing: 16) {
             HStack {
@@ -19,6 +21,10 @@ struct LoginView: View {
                     
                 Spacer()
             }
+            Image(SystemDesign.AppImages.AppLogoBlue500.name)
+                .resizable()
+                .frame(width: 300, height: 300)
+//                .padding(.vertical, -20)
             HStack {
                 Text("Phone Number")
                     .applyLabelStyle(style: .BodyMediumMedium, color: .neutrals900)
@@ -36,6 +42,9 @@ struct LoginView: View {
                 .padding(17)
                 .background(SystemDesign.AppColors.Neutrals100.color)
                 .cornerRadius(8)
+                .onTapGesture {
+                    coordinator.present(sheet: .countryCodes(countryCode: $countryCode))
+                }
                 
                 CustomTextField(
                     keyboardContentType: .telephoneNumber,
@@ -48,25 +57,7 @@ struct LoginView: View {
                     text: $email,
                     isTheirAnError: $emailBorderError)
             }
-            HStack {
-                Text("Email Address")
-                    .applyLabelStyle(style: .BodyMediumMedium, color: .neutrals900)
-                Spacer()
-            }
-            .padding(.bottom, -4)
-            HStack() {
-                CustomTextField(
-                    keyboardContentType: .emailAddress,
-                    keyboardType: .emailAddress,
-                    hint: "Enter Email",
-                    hintStyle: .BodyMediumRegular,
-                    hintColor: .neutrals600,
-                    backgroundColor: SystemDesign.AppColors.Neutrals100.color,
-                    cornerRadius: 8,
-                    text: $email,
-                    isTheirAnError: $emailBorderError)
-            }
-          
+
             Spacer()
             Button(action: {
                 
@@ -84,7 +75,7 @@ struct LoginView: View {
                 Text("Don’t have an account?")
                     .applyLabelStyle(style: .BodyMediumRegular, color: .neutrals900)
                 Button(action: {
-                    
+                    coordinator.pop()
                 }) {
                     Text("Sign Up")
                         .applyLabelStyle(style: .BodyMediumSemiBold, color: .blue500)

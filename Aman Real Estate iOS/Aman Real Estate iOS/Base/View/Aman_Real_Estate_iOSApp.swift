@@ -11,7 +11,6 @@ import SwiftUI
 struct Aman_Real_Estate_iOSApp: App {
     var body: some Scene {
         WindowGroup {
-//            CoordinatorView()
             ContainerView()
         }
     }

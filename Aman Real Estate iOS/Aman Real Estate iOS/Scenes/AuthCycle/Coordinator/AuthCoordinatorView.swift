@@ -1,17 +1,17 @@
 //
-//  CoordinatorView.swift
+//  AuthCoordinatorView.swift
 //  Aman Real Estate iOS
 //
-//  Created by Mohamed Salah on 07/12/2023.
+//  Created by Mohamed Salah on 12/12/2023.
 //
 
 import SwiftUI
 
-struct CoordinatorView: View {
+struct AuthCoordinatorView: View {
     @StateObject private var coordinator = AuthCoordinator()
     var body: some View {
         NavigationStack(path: $coordinator.path) {
-            coordinator.build(page: .login)
+            coordinator.build(page: .register)
                 .navigationDestination(for: AuthPage.self) { page in
                     coordinator.build(page: page)
                 }
@@ -26,6 +26,7 @@ struct CoordinatorView: View {
     }
 }
 
+
 #Preview {
-    CoordinatorView()
+    AuthCoordinatorView()
 }

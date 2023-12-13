@@ -13,7 +13,7 @@ extension SystemDesign {
         case BackDoor, FrontDoor, SmallStar, BigStar
         case DoorKnob, SplashImage
         case FirstHouseOnBoarding, SecondHouseOnBoarding, ThirdHouseOnBoarding
-        case eg
+        case eg, AppLogoBlue500, AppLogoBlue400, AppLogoNeutrals400, AppLogoNeutrals500
         
         //return name of image
         var name: String {
