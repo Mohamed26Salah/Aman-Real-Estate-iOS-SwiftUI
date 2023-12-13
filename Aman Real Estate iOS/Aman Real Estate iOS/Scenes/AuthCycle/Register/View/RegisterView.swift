@@ -13,6 +13,8 @@ struct RegisterView: View {
     @State var isFormValidated: Bool = false
     @State var aggreedOnTerms: Bool = false
     @State var countryCode: String = ""
+    @State private var keyboardHeight: CGFloat = 0
+
     @EnvironmentObject private var coordinator: AuthCoordinator
     var body: some View {
         ScrollView {
@@ -146,6 +148,7 @@ struct RegisterView: View {
                 .padding(.bottom, 10)
             }
             .padding(.horizontal, 16)
+            
         }
         .onTapGesture {
             // Resign first responder status to close the keyboard

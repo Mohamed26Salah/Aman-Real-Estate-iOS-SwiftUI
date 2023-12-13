@@ -16,6 +16,7 @@
 		AB501B0B2B285F8900A5968D /* BaseAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB501B0A2B285F8900A5968D /* BaseAuthViewModel.swift */; };
 		AB501B0F2B28626400A5968D /* CountryCodesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB501B0E2B28626400A5968D /* CountryCodesViewModel.swift */; };
 		AB501B112B286D0A00A5968D /* CountryCodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB501B102B286D0A00A5968D /* CountryCodesView.swift */; };
+		AB501B172B29AB3600A5968D /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB501B162B29AB3600A5968D /* OTPView.swift */; };
 		AB62366E2B249EA00090F9C0 /* SystemDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB62366D2B249EA00090F9C0 /* SystemDesign.swift */; };
 		AB6236702B249EC10090F9C0 /* AppImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB62366F2B249EC10090F9C0 /* AppImages.swift */; };
 		AB6236722B249FC30090F9C0 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6236712B249FC30090F9C0 /* AppColors.swift */; };
@@ -25,8 +26,8 @@
 		AB62367C2B24C6260090F9C0 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB62367B2B24C6260090F9C0 /* OnBoardingView.swift */; };
 		AB62367F2B24D8E10090F9C0 /* View +  Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB62367E2B24D8E10090F9C0 /* View +  Extenstions.swift */; };
 		AB6236812B24E5D80090F9C0 /* StorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6236802B24E5D80090F9C0 /* StorageKeys.swift */; };
+		ABBBB0B42B29BFF600A96177 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBB0B32B29BFF600A96177 /* OTPTextField.swift */; };
 		ABD739062B25E800001D2CBF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD739052B25E800001D2CBF /* LoginView.swift */; };
-		ABD7391A2B25F45B001D2CBF /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABD739192B25F45B001D2CBF /* Storyboard.storyboard */; };
 		ABE56D592B220B2D0049083C /* Aman_Real_Estate_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE56D582B220B2D0049083C /* Aman_Real_Estate_iOSApp.swift */; };
 		ABE56D5D2B220B2D0049083C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE56D5C2B220B2D0049083C /* Assets.xcassets */; };
 		ABE56D602B220B2D0049083C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE56D5F2B220B2D0049083C /* Preview Assets.xcassets */; };
@@ -71,6 +72,7 @@
 		AB501B0A2B285F8900A5968D /* BaseAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAuthViewModel.swift; sourceTree = "<group>"; };
 		AB501B0E2B28626400A5968D /* CountryCodesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodesViewModel.swift; sourceTree = "<group>"; };
 		AB501B102B286D0A00A5968D /* CountryCodesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodesView.swift; sourceTree = "<group>"; };
+		AB501B162B29AB3600A5968D /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
 		AB62366D2B249EA00090F9C0 /* SystemDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemDesign.swift; sourceTree = "<group>"; };
 		AB62366F2B249EC10090F9C0 /* AppImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImages.swift; sourceTree = "<group>"; };
 		AB6236712B249FC30090F9C0 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
@@ -80,13 +82,13 @@
 		AB62367B2B24C6260090F9C0 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		AB62367E2B24D8E10090F9C0 /* View +  Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View +  Extenstions.swift"; sourceTree = "<group>"; };
 		AB6236802B24E5D80090F9C0 /* StorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKeys.swift; sourceTree = "<group>"; };
+		ABBBB0B32B29BFF600A96177 /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
 		ABD739052B25E800001D2CBF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		ABD739072B25ED21001D2CBF /* Aman-Real-Estate-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Aman-Real-Estate-iOS-Info.plist"; sourceTree = SOURCE_ROOT; };
 		ABD739152B25F425001D2CBF /* SF-Pro-Display-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.ttf"; sourceTree = "<group>"; };
 		ABD739162B25F425001D2CBF /* SF-Pro-Display-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.ttf"; sourceTree = "<group>"; };
 		ABD739172B25F425001D2CBF /* SF-Pro-Display-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.ttf"; sourceTree = "<group>"; };
 		ABD739182B25F425001D2CBF /* SF-Pro-Display-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.ttf"; sourceTree = "<group>"; };
-		ABD739192B25F45B001D2CBF /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		ABE56D552B220B2D0049083C /* Aman Real Estate iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aman Real Estate iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE56D582B220B2D0049083C /* Aman_Real_Estate_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aman_Real_Estate_iOSApp.swift; sourceTree = "<group>"; };
 		ABE56D5C2B220B2D0049083C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -246,6 +248,39 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		AB501B122B29AAE000A5968D /* OTP */ = {
+			isa = PBXGroup;
+			children = (
+				AB501B152B29AB0900A5968D /* Model */,
+				AB501B142B29AB0300A5968D /* ViewModel */,
+				AB501B132B29AAFD00A5968D /* View */,
+			);
+			path = OTP;
+			sourceTree = "<group>";
+		};
+		AB501B132B29AAFD00A5968D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AB501B162B29AB3600A5968D /* OTPView.swift */,
+				ABBBB0B32B29BFF600A96177 /* OTPTextField.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AB501B142B29AB0300A5968D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AB501B152B29AB0900A5968D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		AB62366C2B249E8E0090F9C0 /* SystemDesign */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,7 +297,6 @@
 			children = (
 				AB6236772B24B4680090F9C0 /* SplashScreenAnimated.swift */,
 				AB62367B2B24C6260090F9C0 /* OnBoardingView.swift */,
-				ABD739192B25F45B001D2CBF /* Storyboard.storyboard */,
 			);
 			path = OnBoardingCycle;
 			sourceTree = "<group>";
@@ -383,6 +417,7 @@
 				AB31BE1E2B269B4F004D3915 /* Login */,
 				AB31BE1F2B269B69004D3915 /* Register */,
 				AB501B012B285E7200A5968D /* CountryCodes */,
+				AB501B122B29AAE000A5968D /* OTP */,
 			);
 			path = AuthCycle;
 			sourceTree = "<group>";
@@ -562,7 +597,6 @@
 				AB501B092B285F0C00A5968D /* CountryCodes.json in Resources */,
 				ABE56D602B220B2D0049083C /* Preview Assets.xcassets in Resources */,
 				ABE56D5D2B220B2D0049083C /* Assets.xcassets in Resources */,
-				ABD7391A2B25F45B001D2CBF /* Storyboard.storyboard in Resources */,
 				AB31BE192B25FFF4004D3915 /* SF-Pro-Display-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -595,6 +629,7 @@
 				AB6236702B249EC10090F9C0 /* AppImages.swift in Sources */,
 				AB6236812B24E5D80090F9C0 /* StorageKeys.swift in Sources */,
 				AB501B0B2B285F8900A5968D /* BaseAuthViewModel.swift in Sources */,
+				ABBBB0B42B29BFF600A96177 /* OTPTextField.swift in Sources */,
 				AB62366E2B249EA00090F9C0 /* SystemDesign.swift in Sources */,
 				ABE56D592B220B2D0049083C /* Aman_Real_Estate_iOSApp.swift in Sources */,
 				AB6236782B24B4680090F9C0 /* SplashScreenAnimated.swift in Sources */,
@@ -602,6 +637,7 @@
 				AB501B062B285EDF00A5968D /* Country.swift in Sources */,
 				AB31BE242B269B99004D3915 /* RegisterView.swift in Sources */,
 				AB62367C2B24C6260090F9C0 /* OnBoardingView.swift in Sources */,
+				AB501B172B29AB3600A5968D /* OTPView.swift in Sources */,
 				AB501B0F2B28626400A5968D /* CountryCodesViewModel.swift in Sources */,
 				ABE56D9D2B222FFF0049083C /* Coordinator.swift in Sources */,
 				AB6236752B24AB7D0090F9C0 /* AppFonts.swift in Sources */,
