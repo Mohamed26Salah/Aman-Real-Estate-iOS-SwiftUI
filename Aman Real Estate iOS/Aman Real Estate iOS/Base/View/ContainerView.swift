@@ -10,6 +10,8 @@ import SwiftUI
 struct ContainerView: View {
     @State private var isSplashScreenPresented: Bool = true
     @State private var isOnBoardingViewPresented: Bool = true
+    @StateObject var sessionManager = SessionManager()
+
     private var shouldShowOnboarding: Bool {
             UserDefaults.standard.object(forKey: StorageKeys.UserDefaults.showOnboardingScreen) == nil && isOnBoardingViewPresented
         }
@@ -20,6 +22,7 @@ struct ContainerView: View {
                 OnBoardingView(isPresented: $isOnBoardingViewPresented)
             } else {
                 AuthCoordinatorView()
+//                    .environmentObject(sessionManager)
             }
             
         } else {

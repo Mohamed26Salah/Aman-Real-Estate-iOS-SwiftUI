@@ -11,8 +11,10 @@ struct LoginView: View {
     @State var email: String = ""
     @State var emailBorderError: Bool = false
     @State var isFormValidated: Bool = false
-    @EnvironmentObject private var coordinator: AuthCoordinator
     @State var countryCode: String = ""
+
+    @EnvironmentObject private var coordinator: AuthCoordinator
+    @StateObject var loginViewModel: LoginViewModel
     var body: some View {
         VStack(spacing: 16) {
             HStack {
@@ -92,6 +94,8 @@ struct LoginView: View {
     }
 }
 
-#Preview {
-    LoginView()
-}
+//#Preview {
+//    @StateObject var loginViewModel: LoginViewModel = LoginViewModel()
+//
+//    LoginView(loginViewModel: loginViewModel)
+//}

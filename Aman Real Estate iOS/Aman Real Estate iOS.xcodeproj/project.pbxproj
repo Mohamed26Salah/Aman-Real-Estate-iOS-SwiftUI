@@ -27,6 +27,10 @@
 		AB62367F2B24D8E10090F9C0 /* View +  Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB62367E2B24D8E10090F9C0 /* View +  Extenstions.swift */; };
 		AB6236812B24E5D80090F9C0 /* StorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6236802B24E5D80090F9C0 /* StorageKeys.swift */; };
 		ABBBB0B42B29BFF600A96177 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBB0B32B29BFF600A96177 /* OTPTextField.swift */; };
+		ABBBB0B62B2CBD9800A96177 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBB0B52B2CBD9800A96177 /* SessionManager.swift */; };
+		ABBBB0B82B2CBDCB00A96177 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABBBB0B72B2CBDCB00A96177 /* GoogleService-Info.plist */; };
+		ABBBB0BA2B2CBEE800A96177 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBB0B92B2CBEE800A96177 /* RegisterViewModel.swift */; };
+		ABBBB0BC2B2CBEFA00A96177 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBB0BB2B2CBEFA00A96177 /* LoginViewModel.swift */; };
 		ABD739062B25E800001D2CBF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD739052B25E800001D2CBF /* LoginView.swift */; };
 		ABE56D592B220B2D0049083C /* Aman_Real_Estate_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE56D582B220B2D0049083C /* Aman_Real_Estate_iOSApp.swift */; };
 		ABE56D5D2B220B2D0049083C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE56D5C2B220B2D0049083C /* Assets.xcassets */; };
@@ -83,6 +87,10 @@
 		AB62367E2B24D8E10090F9C0 /* View +  Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View +  Extenstions.swift"; sourceTree = "<group>"; };
 		AB6236802B24E5D80090F9C0 /* StorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKeys.swift; sourceTree = "<group>"; };
 		ABBBB0B32B29BFF600A96177 /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
+		ABBBB0B52B2CBD9800A96177 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		ABBBB0B72B2CBDCB00A96177 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ABBBB0B92B2CBEE800A96177 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		ABBBB0BB2B2CBEFA00A96177 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		ABD739052B25E800001D2CBF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		ABD739072B25ED21001D2CBF /* Aman-Real-Estate-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Aman-Real-Estate-iOS-Info.plist"; sourceTree = SOURCE_ROOT; };
 		ABD739152B25F425001D2CBF /* SF-Pro-Display-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.ttf"; sourceTree = "<group>"; };
@@ -170,6 +178,7 @@
 		AB31BE212B269B83004D3915 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				ABBBB0B92B2CBEE800A96177 /* RegisterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -244,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				AB501B0A2B285F8900A5968D /* BaseAuthViewModel.swift */,
+				ABBBB0B52B2CBD9800A96177 /* SessionManager.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -383,6 +393,7 @@
 		ABE56D822B220C300049083C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ABBBB0B72B2CBDCB00A96177 /* GoogleService-Info.plist */,
 				ABD739082B25ED51001D2CBF /* Fonts */,
 				AB62367D2B24D8D10090F9C0 /* Extenstions */,
 				AB62366C2B249E8E0090F9C0 /* SystemDesign */,
@@ -458,6 +469,7 @@
 		ABE56D8A2B220CBE0049083C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				ABBBB0BB2B2CBEFA00A96177 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -592,6 +604,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABEA75402B25FCA1004C9BAD /* SF-Pro-Display-Semibold.ttf in Resources */,
+				ABBBB0B82B2CBDCB00A96177 /* GoogleService-Info.plist in Resources */,
 				ABEA753F2B25FC9D004C9BAD /* SF-Pro-Display-Regular.ttf in Resources */,
 				ABEA753E2B25FC9A004C9BAD /* SF-Pro-Display-Medium.ttf in Resources */,
 				AB501B092B285F0C00A5968D /* CountryCodes.json in Resources */,
@@ -623,6 +636,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB6236722B249FC30090F9C0 /* AppColors.swift in Sources */,
+				ABBBB0B62B2CBD9800A96177 /* SessionManager.swift in Sources */,
 				AB501B002B2859F100A5968D /* AuthCoordinatorView.swift in Sources */,
 				AB501B112B286D0A00A5968D /* CountryCodesView.swift in Sources */,
 				AB62367F2B24D8E10090F9C0 /* View +  Extenstions.swift in Sources */,
@@ -634,12 +648,14 @@
 				ABE56D592B220B2D0049083C /* Aman_Real_Estate_iOSApp.swift in Sources */,
 				AB6236782B24B4680090F9C0 /* SplashScreenAnimated.swift in Sources */,
 				AB31BE1D2B262479004D3915 /* CustomTextField.swift in Sources */,
+				ABBBB0BC2B2CBEFA00A96177 /* LoginViewModel.swift in Sources */,
 				AB501B062B285EDF00A5968D /* Country.swift in Sources */,
 				AB31BE242B269B99004D3915 /* RegisterView.swift in Sources */,
 				AB62367C2B24C6260090F9C0 /* OnBoardingView.swift in Sources */,
 				AB501B172B29AB3600A5968D /* OTPView.swift in Sources */,
 				AB501B0F2B28626400A5968D /* CountryCodesViewModel.swift in Sources */,
 				ABE56D9D2B222FFF0049083C /* Coordinator.swift in Sources */,
+				ABBBB0BA2B2CBEE800A96177 /* RegisterViewModel.swift in Sources */,
 				AB6236752B24AB7D0090F9C0 /* AppFonts.swift in Sources */,
 				AB62367A2B24BC0A0090F9C0 /* ContainerView.swift in Sources */,
 				ABE56D9F2B2238050049083C /* AuthCoordinator.swift in Sources */,
@@ -821,7 +837,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.12488.salah;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.amanProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -851,7 +867,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.12488.salah;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.amanProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

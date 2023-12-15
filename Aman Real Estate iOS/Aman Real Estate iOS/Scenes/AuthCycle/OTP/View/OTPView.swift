@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct OTPView: View {
-    @Binding var phoneNumber: String
     @State var texttt: String = ""
     @State var enableResendCode: Bool = false
     @State private var remainingTime = 60
     @State private var timer: Timer? = nil
     @State var otpCode: String = ""
+    
+    var phoneNumber: String
+    
     var body: some View {
         VStack {
             HStack {
@@ -100,5 +102,5 @@ struct OTPView: View {
 }
 
 #Preview {
-    OTPView(phoneNumber: .constant("+20 01097262974"))
+    OTPView(phoneNumber: "+20 01097262974")
 }

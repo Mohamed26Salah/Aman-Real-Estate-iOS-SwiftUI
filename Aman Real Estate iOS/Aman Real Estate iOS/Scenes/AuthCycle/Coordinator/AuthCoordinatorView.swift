@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AuthCoordinatorView: View {
+//    @EnvironmentObject private var sessionManager: SessionManager
     @StateObject private var coordinator = AuthCoordinator()
     var body: some View {
         NavigationStack(path: $coordinator.path) {

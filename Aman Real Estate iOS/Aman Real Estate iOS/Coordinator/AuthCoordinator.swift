@@ -8,7 +8,8 @@
 import SwiftUI
 
 enum AuthPage: Hashable, Equatable {
-    case login, register, otp
+    case login, register
+    case otp(phoneNumber: String)
     
 //    var id: Self { self }
 }
@@ -37,15 +38,18 @@ enum AuthFullScreenCover: Identifiable, Equatable {
 }
 
 class AuthCoordinator: GenericCoordinator<AuthPage, AuthSheet, AuthFullScreenCover> {
+    var loginViewModel = LoginViewModel()
+    var registerViewModel = RegisterViewModel()
+    
     @ViewBuilder
     func build(page: AuthPage) -> some View {
         switch page {
         case .login:
-            LoginView()
+            LoginView(loginViewModel: self.loginViewModel)
         case .register:
-            RegisterView()
-        case .otp:
-            RegisterView()
+            RegisterView(registerViewModel: self.registerViewModel)
+        case .otp(let phoneNumber):
+            OTPView(phoneNumber: phoneNumber)
         }
     }
     
@@ -61,7 +65,7 @@ class AuthCoordinator: GenericCoordinator<AuthPage, AuthSheet, AuthFullScreenCov
     func build(fullScreenCover: AuthFullScreenCover) -> some View {
         switch fullScreenCover {
         case .welcome:
-            RegisterView()
+            EmptyView()
         }
     }
 }

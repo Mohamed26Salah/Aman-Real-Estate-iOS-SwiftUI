@@ -16,6 +16,8 @@ struct RegisterView: View {
     @State private var keyboardHeight: CGFloat = 0
 
     @EnvironmentObject private var coordinator: AuthCoordinator
+    @StateObject var registerViewModel: RegisterViewModel
+
     var body: some View {
         ScrollView {
             VStack(spacing: 16) {
@@ -157,8 +159,9 @@ struct RegisterView: View {
     }
 }
 
-#Preview {
-    RegisterView()
-}
+//#Preview {
+//    @StateObject var registerViewModel: RegisterViewModel = RegisterViewModel()
+//    RegisterView(registerViewModel: registerViewModel)
+//}
 
 
