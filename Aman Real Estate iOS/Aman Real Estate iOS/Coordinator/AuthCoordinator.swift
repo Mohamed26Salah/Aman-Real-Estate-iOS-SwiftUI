@@ -8,7 +8,7 @@
 import SwiftUI
 
 enum AuthPage: Hashable, Equatable {
-    case login, register
+    case login, register, forgetPassword
     case otp(phoneNumber: String)
     
 //    var id: Self { self }
@@ -50,6 +50,8 @@ class AuthCoordinator: GenericCoordinator<AuthPage, AuthSheet, AuthFullScreenCov
             RegisterView(registerViewModel: self.registerViewModel)
         case .otp(let phoneNumber):
             OTPView(phoneNumber: phoneNumber)
+        case .forgetPassword:
+            ForgetPasswordView(loginViewModel: self.loginViewModel)
         }
     }
     

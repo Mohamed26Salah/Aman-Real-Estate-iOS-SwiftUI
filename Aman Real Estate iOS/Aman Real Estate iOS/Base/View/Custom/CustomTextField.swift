@@ -16,29 +16,65 @@ struct CustomTextField: View {
     var hintColor: Color
     var backgroundColor: Color
     var cornerRadius: CGFloat
+    var isSecureField: Bool
+    var height: CGFloat
     @Binding var text: String
-    @Binding var isTheirAnError: Bool
+    @Binding var isTextFieldValid: Bool
     @FocusState var isEnabled: Bool
+    @State var showPassword: Bool = false
 
     var body: some View {
-        TextField(text: $text) {
-            Text(hint)
-                .applyLabelStyle(style: hintStyle, color: hintColor)
+        HStack {
+            Group {
+                if isSecureField && !showPassword {
+                    SecureField(hint, text: $text)
+                } else {
+                    TextField(hint, text: $text)
+                }
+            }
+            .frame(height: height)
+            .disableAutocorrection(true)
+            .autocapitalization(.none)
+            .keyboardType(keyboardType)
+            .textContentType(keyboardContentType)
+            .focused($isEnabled)
+            .padding()
+            
+            if isSecureField {
+                Button(action: {
+                    showPassword.toggle()
+                }, label: {
+                    Image(systemName: showPassword ? "eye" : "eye.slash")
+                        .tint(.neutrals900)
+                })
+                .padding(.horizontal, 15)
+            }
         }
-        .focused($isEnabled)
-        .keyboardType(keyboardType)
-        .textContentType(keyboardContentType)
-        .padding()
         .background(backgroundColor)
         .cornerRadius(cornerRadius)
         .overlay(
             RoundedRectangle(cornerRadius: cornerRadius)
-                .stroke(isEnabled ? isTheirAnError ? Color.red : Color.blue : Color.clear)
+                .stroke(isEnabled ? !isTextFieldValid ? Color.red : Color.blue : Color.clear)
         )
-        .animation(.default, value: isEnabled)
-        .animation(.default, value: isTheirAnError)
+        .animation(.smooth.speed(3.0), value: isEnabled)
+        .animation(.smooth.speed(3.0), value: !isTextFieldValid)
     }
 }
 
-
+#Preview {
+    CustomTextField(
+        keyboardContentType: .name,
+        keyboardType: .default,
+        hint: "Enter Password",
+        hintStyle: .BodyMediumRegular,
+        hintColor: .neutrals600,
+        backgroundColor: SystemDesign.AppColors.Neutrals100.color,
+        cornerRadius: 8,
+        isSecureField: true,
+        height: 35,
+        text: .constant(""),
+        isTextFieldValid: .constant(false)
+       
+    )
+}
 

@@ -8,94 +8,155 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State var email: String = ""
-    @State var emailBorderError: Bool = false
-    @State var isFormValidated: Bool = false
     @State var countryCode: String = ""
 
+    @EnvironmentObject private var sessionManager: SessionManager
     @EnvironmentObject private var coordinator: AuthCoordinator
     @StateObject var loginViewModel: LoginViewModel
     var body: some View {
-        VStack(spacing: 16) {
-            HStack {
-                Text("Let's Login")
-                    .applyLabelStyle(style: .Heading3, color: .neutrals900)
-                    
-                Spacer()
-            }
-            Image(SystemDesign.AppImages.AppLogoBlue500.name)
-                .resizable()
-                .frame(width: 300, height: 300)
-//                .padding(.vertical, -20)
-            HStack {
-                Text("Phone Number")
-                    .applyLabelStyle(style: .BodyMediumMedium, color: .neutrals900)
-                Spacer()
-            }
-            .padding(.top, 8)
-            HStack(spacing: 16) {
+        ZStack {
+            VStack(spacing: 16) {
                 HStack {
-                    Image(SystemDesign.AppImages.eg.name)
-                        .resizable()
-                        .frame(width: 27, height: 20)
-                    Text("+20")
-                        .applyLabelStyle(style: .BodyMediumMedium, color: .neutrals900)
-                }
-                .padding(17)
-                .background(SystemDesign.AppColors.Neutrals100.color)
-                .cornerRadius(8)
-                .onTapGesture {
-                    coordinator.present(sheet: .countryCodes(countryCode: $countryCode))
-                }
-                
-                CustomTextField(
-                    keyboardContentType: .telephoneNumber,
-                    keyboardType: .numberPad,
-                    hint: "Enter Phone Number",
-                    hintStyle: .BodyMediumRegular,
-                    hintColor: .neutrals600,
-                    backgroundColor: SystemDesign.AppColors.Neutrals100.color,
-                    cornerRadius: 8,
-                    text: $email,
-                    isTheirAnError: $emailBorderError)
-            }
-
-            Spacer()
-            Button(action: {
-                
-            }) {
-                Text("Login")
-                    .applyLabelStyle(style: .BodyMediumSemiBold, color: .blue50)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(isFormValidated ? SystemDesign.AppColors.Blue500.color : SystemDesign.AppColors.Blue200.color)
-                    .cornerRadius(8)
+                    Text("Let's Login")
+                        .applyLabelStyle(style: .Heading3, color: .neutrals900)
                     
-            }
-            HStack(spacing: 3) {
-                Spacer()
-                Text("Don’t have an account?")
-                    .applyLabelStyle(style: .BodyMediumRegular, color: .neutrals900)
-                Button(action: {
-                    coordinator.pop()
-                }) {
-                    Text("Sign Up")
-                        .applyLabelStyle(style: .BodyMediumSemiBold, color: .blue500)
+                    Spacer()
                 }
+                Image(SystemDesign.AppImages.AppLogoBlue500.name)
+                    .resizable()
+                    .frame(width: 250, height: 250)
+                //.padding(.vertical, -20)
+                HStack {
+                    Text("Email Address")
+                        .applyLabelStyle(style: .BodyMediumMedium, color: .neutrals900)
+                    Spacer()
+                }
+                .padding(.bottom, -4)
+                HStack() {
+                    CustomTextField(
+                        keyboardContentType: .emailAddress,
+                        keyboardType: .emailAddress,
+                        hint: "Enter Email",
+                        hintStyle: .BodyMediumRegular,
+                        hintColor: .neutrals600,
+                        backgroundColor: .neutrals100,
+                        cornerRadius: 8,
+                        isSecureField: false,
+                        height: 30,
+                        text: $loginViewModel.email,
+                        isTextFieldValid: $loginViewModel.isEmailValid)
+                }
+                HStack(spacing: 4) {
+                    Image(systemName: "exclamationmark.circle")
+                        .foregroundStyle(.red)
+                    Text(loginViewModel.isEmailValidErrorMessage)
+                        .applyLabelStyle(style: .BodySmallRegular, color: .red)
+                    Spacer()
+                }
+                .padding(.top, -5)
+                .opacity(loginViewModel.showEmailErrorMessage)
+                HStack {
+                    Text("Password")
+                        .applyLabelStyle(style: .BodyMediumMedium, color: .neutrals900)
+                    Spacer()
+                }
+                .padding(.top, 8)
+                HStack() {
+                    CustomTextField(
+                        keyboardContentType: .name,
+                        keyboardType: .default,
+                        hint: "Enter Password",
+                        hintStyle: .BodyMediumRegular,
+                        hintColor: .neutrals600,
+                        backgroundColor: .neutrals100,
+                        cornerRadius: 8,
+                        isSecureField: true,
+                        height: 30,
+                        text: $loginViewModel.userPassword,
+                        isTextFieldValid: $loginViewModel.isUserPasswordValid)
+                }
+                HStack {
+                    HStack(spacing: 4) {
+                        Image(systemName: "exclamationmark.circle")
+                            .foregroundStyle(.red)
+                        Text(loginViewModel.isUserPasswordValidErrorMessage)
+                            .applyLabelStyle(style: .BodySmallRegular, color: .red)
+                        Spacer()
+                    }
+                    .padding(.top, -5)
+                    .opacity(loginViewModel.showUserPassswordErrorMessage)
+                    Spacer()
+                    Button {
+                        coordinator.push(.forgetPassword)
+                    } label: {
+                        Text("ForgetPassword?")
+                            .applyLabelStyle(style: .BodyMediumMedium, color: .blue500)
+                    }
+
+                }
+               
                 Spacer()
+                Button(action: {
+                    Task {
+                       try await loginViewModel.signIn()
+                    }
+                }) {
+                    Text("Login")
+                        .applyLabelStyle(style: .BodyMediumSemiBold, color: .blue50)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(formIsValid ? .blue500 : .blue200)
+                        .cornerRadius(8)
+                    
+                }
+                .disabled(!formIsValid)
+                HStack(spacing: 3) {
+                    Spacer()
+                    Text("Don’t have an account?")
+                        .applyLabelStyle(style: .BodyMediumRegular, color: .neutrals900)
+                    Button(action: {
+                        coordinator.pop()
+                    }) {
+                        Text("Sign Up")
+                            .applyLabelStyle(style: .BodyMediumSemiBold, color: .blue500)
+                    }
+                    Spacer()
+                }
+            }
+            .padding(.horizontal, 16)
+            .onTapGesture {
+                // Resign first responder status to close the keyboard
+                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+            }
+            .alert(loginViewModel.error?.name ?? "Error", isPresented: $loginViewModel.showAlert, presenting: loginViewModel.error) { details in
+                Button("OK") {
+                    DispatchQueue.main.async {
+                        self.loginViewModel.showAlert = false
+                    }
+                }
+            } message: { details in
+                Text(details.error)
+            }
+            if loginViewModel.showLoading {
+                ProgressView()
+                    .tint(.blue500)
+                    .scaleEffect(3)
             }
         }
-        .padding(.horizontal, 16)
-        .onTapGesture {
-            // Resign first responder status to close the keyboard
-            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-        }
-       
+        .onChange(of: loginViewModel.userSession, perform: { _ in
+            sessionManager.userSession = loginViewModel.userSession
+            sessionManager.currentUser = loginViewModel.currentUser
+        })
+    }
+}
+
+extension LoginView {
+    var formIsValid: Bool {
+        return loginViewModel.isEmailValid
+        && loginViewModel.isUserPasswordValid
     }
 }
 
 //#Preview {
-//    @StateObject var loginViewModel: LoginViewModel = LoginViewModel()
-//
-//    LoginView(loginViewModel: loginViewModel)
+//    LoginView()
 //}

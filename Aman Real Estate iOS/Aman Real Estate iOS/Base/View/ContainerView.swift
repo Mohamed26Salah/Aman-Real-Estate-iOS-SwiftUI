@@ -21,8 +21,17 @@ struct ContainerView: View {
             if shouldShowOnboarding {
                 OnBoardingView(isPresented: $isOnBoardingViewPresented)
             } else {
-                AuthCoordinatorView()
-//                    .environmentObject(sessionManager)
+                if sessionManager.userSession != nil {
+                    Text("Your Are Logged In")
+                    Button(action: {
+                        sessionManager.signOut()
+                    }, label: {
+                        Text("LogOut")
+                    })
+                } else {
+                    AuthCoordinatorView()
+                        .environmentObject(sessionManager)
+                }
             }
             
         } else {
