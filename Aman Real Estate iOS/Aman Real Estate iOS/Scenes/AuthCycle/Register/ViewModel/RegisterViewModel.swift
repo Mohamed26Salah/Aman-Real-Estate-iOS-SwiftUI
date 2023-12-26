@@ -14,8 +14,8 @@ import Combine
 
 class RegisterViewModel: BaseAuthViewModel {
     
-    @Published var userSession: FirebaseAuth.User?
-    @Published var currentUser: User?
+//    @Published var userSession: FirebaseAuth.User?
+//    @Published var currentUser: User?
   
     @Published var email: String = ""
     @Published var isEmailValid: Bool = false
@@ -146,9 +146,9 @@ extension RegisterViewModel {
             self.error = ErrorDetails(name: "Error", error: error.localizedDescription)
         }
     }
-    func fetchUser() async {
-        guard let uid = Auth.auth().currentUser?.uid else {return}
-        guard let snapShot = try? await Firestore.firestore().collection("users").document(uid).getDocument() else {return}
-        self.currentUser = try? snapShot.data(as: User.self)
-    }
+//    func fetchUser() async {
+//        guard let uid = Auth.auth().currentUser?.uid else {return}
+//        guard let snapShot = try? await Firestore.firestore().collection("users").document(uid).getDocument() else {return}
+//        self.currentUser = try? snapShot.data(as: User.self)
+//    }
 }

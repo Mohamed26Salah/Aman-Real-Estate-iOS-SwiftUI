@@ -225,11 +225,7 @@ struct RegisterView: View {
                 UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
             }
             .alert(registerViewModel.error?.name ?? "Error", isPresented: $registerViewModel.showAlert, presenting: registerViewModel.error) { details in
-                Button("OK") {
-                    DispatchQueue.main.async {
-                        self.registerViewModel.showAlert = false
-                    }
-                }
+                Button("OK", role: .cancel) { }
             } message: { details in
                 Text(details.error)
             }

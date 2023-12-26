@@ -14,8 +14,8 @@ import Combine
 
 class LoginViewModel: BaseAuthViewModel {
     
-    @Published var userSession: FirebaseAuth.User?
-    @Published var currentUser: User?
+//    @Published var userSession: FirebaseAuth.User?
+//    @Published var currentUser: User?
     
     @Published var email: String = ""
     @Published var isEmailValid: Bool = false
@@ -94,11 +94,11 @@ extension LoginViewModel {
             self.error = ErrorDetails(name: "Error", error: error.localizedDescription)
         }
     }
-    func fetchUser() async {
-        guard let uid = Auth.auth().currentUser?.uid else {return}
-        guard let snapShot = try? await Firestore.firestore().collection("users").document(uid).getDocument() else {return}
-        self.currentUser = try? snapShot.data(as: User.self)
-    }
+//    func fetchUser() async {
+//        guard let uid = Auth.auth().currentUser?.uid else {return}
+//        guard let snapShot = try? await Firestore.firestore().collection("users").document(uid).getDocument() else {return}
+//        self.currentUser = try? snapShot.data(as: User.self)
+//    }
     func resetPassword() async {
         self.error = ErrorDetails(name: "Note", error: "An Email has been sent to \(email) to reset password.")
             self.showAlert.toggle()

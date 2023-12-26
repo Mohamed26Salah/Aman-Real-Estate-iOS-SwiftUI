@@ -73,14 +73,9 @@ struct ForgetPasswordView: View {
                 UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
             }
         }
-       
+        .customBackButton()
         .alert(loginViewModel.error?.name ?? "Error", isPresented: $loginViewModel.showAlert, presenting: loginViewModel.error) { details in
-            Button("OK") {
-                self.loginViewModel.showAlert.toggle()
-//                DispatchQueue.main.async {
-//                    self.loginViewModel.showAlert = false
-//                }
-            }
+            Button("OK", role: .cancel) { }
         } message: { details in
             Text(details.error)
         }

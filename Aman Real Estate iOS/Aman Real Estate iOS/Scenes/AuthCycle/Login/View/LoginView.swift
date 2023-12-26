@@ -129,11 +129,7 @@ struct LoginView: View {
                 UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
             }
             .alert(loginViewModel.error?.name ?? "Error", isPresented: $loginViewModel.showAlert, presenting: loginViewModel.error) { details in
-                Button("OK") {
-                    DispatchQueue.main.async {
-                        self.loginViewModel.showAlert = false
-                    }
-                }
+                Button("OK", role: .cancel) { }
             } message: { details in
                 Text(details.error)
             }
@@ -143,10 +139,11 @@ struct LoginView: View {
                     .scaleEffect(3)
             }
         }
-        .onChange(of: loginViewModel.userSession, perform: { _ in
+        .onChange(of: loginViewModel.userSession, {
             sessionManager.userSession = loginViewModel.userSession
             sessionManager.currentUser = loginViewModel.currentUser
         })
+        .customBackButton()
     }
 }
 

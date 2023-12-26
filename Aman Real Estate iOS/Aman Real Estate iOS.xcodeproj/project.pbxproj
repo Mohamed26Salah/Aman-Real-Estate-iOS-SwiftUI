@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB0A963A2B3AEA8D00EC1C44 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0A96392B3AEA8D00EC1C44 /* NavigationBarView.swift */; };
+		AB0A963C2B3B002100EC1C44 /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0A963B2B3B002100EC1C44 /* NavigationBarModifier.swift */; };
 		AB1F74602B347C450097D70A /* ForgetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1F745F2B347C450097D70A /* ForgetPasswordView.swift */; };
 		AB22E2CF2B3458DF00B6B562 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB22E2CE2B3458DF00B6B562 /* GoogleService-Info.plist */; };
 		AB22E2D22B345A7700B6B562 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AB22E2D12B345A7700B6B562 /* FirebaseAuth */; };
@@ -28,7 +30,7 @@
 		AB6236722B249FC30090F9C0 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6236712B249FC30090F9C0 /* AppColors.swift */; };
 		AB6236752B24AB7D0090F9C0 /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6236742B24AB7D0090F9C0 /* AppFonts.swift */; };
 		AB6236782B24B4680090F9C0 /* SplashScreenAnimated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6236772B24B4680090F9C0 /* SplashScreenAnimated.swift */; };
-		AB62367A2B24BC0A0090F9C0 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6236792B24BC0A0090F9C0 /* ContainerView.swift */; };
+		AB62367A2B24BC0A0090F9C0 /* InitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6236792B24BC0A0090F9C0 /* InitView.swift */; };
 		AB62367C2B24C6260090F9C0 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB62367B2B24C6260090F9C0 /* OnBoardingView.swift */; };
 		AB62367F2B24D8E10090F9C0 /* View +  Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB62367E2B24D8E10090F9C0 /* View +  Extenstions.swift */; };
 		AB6236812B24E5D80090F9C0 /* StorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6236802B24E5D80090F9C0 /* StorageKeys.swift */; };
@@ -72,6 +74,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB0A96392B3AEA8D00EC1C44 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
+		AB0A963B2B3B002100EC1C44 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
 		AB1F745F2B347C450097D70A /* ForgetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordView.swift; sourceTree = "<group>"; };
 		AB22E2CE2B3458DF00B6B562 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AB31BE1A2B260040004D3915 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
@@ -89,7 +93,7 @@
 		AB6236712B249FC30090F9C0 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		AB6236742B24AB7D0090F9C0 /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
 		AB6236772B24B4680090F9C0 /* SplashScreenAnimated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenAnimated.swift; sourceTree = "<group>"; };
-		AB6236792B24BC0A0090F9C0 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		AB6236792B24BC0A0090F9C0 /* InitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitView.swift; sourceTree = "<group>"; };
 		AB62367B2B24C6260090F9C0 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		AB62367E2B24D8E10090F9C0 /* View +  Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View +  Extenstions.swift"; sourceTree = "<group>"; };
 		AB6236802B24E5D80090F9C0 /* StorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKeys.swift; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				AB31BE1C2B262479004D3915 /* CustomTextField.swift */,
+				AB0A963B2B3B002100EC1C44 /* NavigationBarModifier.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -467,7 +472,8 @@
 			isa = PBXGroup;
 			children = (
 				ABE56D582B220B2D0049083C /* Aman_Real_Estate_iOSApp.swift */,
-				AB6236792B24BC0A0090F9C0 /* ContainerView.swift */,
+				AB6236792B24BC0A0090F9C0 /* InitView.swift */,
+				AB0A96392B3AEA8D00EC1C44 /* NavigationBarView.swift */,
 				AB31BE1B2B26246A004D3915 /* Custom */,
 			);
 			path = View;
@@ -676,12 +682,14 @@
 				AB62367F2B24D8E10090F9C0 /* View +  Extenstions.swift in Sources */,
 				AB6236702B249EC10090F9C0 /* AppImages.swift in Sources */,
 				AB6236812B24E5D80090F9C0 /* StorageKeys.swift in Sources */,
+				AB0A963C2B3B002100EC1C44 /* NavigationBarModifier.swift in Sources */,
 				AB501B0B2B285F8900A5968D /* BaseAuthViewModel.swift in Sources */,
 				AB1F74602B347C450097D70A /* ForgetPasswordView.swift in Sources */,
 				ABBBB0B42B29BFF600A96177 /* OTPTextField.swift in Sources */,
 				AB62366E2B249EA00090F9C0 /* SystemDesign.swift in Sources */,
 				ABE56D592B220B2D0049083C /* Aman_Real_Estate_iOSApp.swift in Sources */,
 				AB6236782B24B4680090F9C0 /* SplashScreenAnimated.swift in Sources */,
+				AB0A963A2B3AEA8D00EC1C44 /* NavigationBarView.swift in Sources */,
 				AB31BE1D2B262479004D3915 /* CustomTextField.swift in Sources */,
 				ABBBB0BC2B2CBEFA00A96177 /* LoginViewModel.swift in Sources */,
 				AB501B062B285EDF00A5968D /* Country.swift in Sources */,
@@ -692,7 +700,7 @@
 				ABE56D9D2B222FFF0049083C /* Coordinator.swift in Sources */,
 				ABBBB0BA2B2CBEE800A96177 /* RegisterViewModel.swift in Sources */,
 				AB6236752B24AB7D0090F9C0 /* AppFonts.swift in Sources */,
-				AB62367A2B24BC0A0090F9C0 /* ContainerView.swift in Sources */,
+				AB62367A2B24BC0A0090F9C0 /* InitView.swift in Sources */,
 				ABE56D9F2B2238050049083C /* AuthCoordinator.swift in Sources */,
 				ABD739062B25E800001D2CBF /* LoginView.swift in Sources */,
 				ABA9317E2B306E6100BF8F9E /* ErrorDetails.swift in Sources */,

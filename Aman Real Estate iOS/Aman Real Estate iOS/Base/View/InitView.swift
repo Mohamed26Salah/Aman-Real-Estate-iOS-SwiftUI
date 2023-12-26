@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContainerView: View {
+struct InitView: View {
     @State private var isSplashScreenPresented: Bool = true
     @State private var isOnBoardingViewPresented: Bool = true
     @StateObject var sessionManager = SessionManager()
@@ -41,7 +41,7 @@ struct ContainerView: View {
 }
 
 #Preview {
-    ContainerView()
+    InitView()
 }
 
 //if !isSplashScreenPresented {
