@@ -41,8 +41,8 @@ class RegisterViewModel: BaseAuthViewModel {
     @Published var agreedOnTermsErrorMessage: String = ""
     @Published var showAgreedOnTermsErrorMessage: CGFloat = 0.0
 
-    @Published var countryCodes: String = ""
-    
+    @Published var countryCode: String = "20"
+    @Published var selectedCountry: String = "Egypt"
     
     override init() {
         super.init()
@@ -57,7 +57,7 @@ extension RegisterViewModel {
     func realTimeValidation() {
         $email
             .dropFirst()
-            .debounce(for: 0.8, scheduler: RunLoop.main)
+            .debounce(for: 0.4, scheduler: RunLoop.main)
             .removeDuplicates()
             .map { email in
                 if !Validation.isValidEmail(email) {
@@ -74,7 +74,7 @@ extension RegisterViewModel {
         
         $userPassword
             .dropFirst()
-            .debounce(for: 0.8, scheduler: RunLoop.main)
+            .debounce(for: 0.4, scheduler: RunLoop.main)
             .removeDuplicates()
             .map { password in
                 if !Validation.isPasswordValid(password) {
@@ -91,7 +91,7 @@ extension RegisterViewModel {
         
         $phoneNumber
             .dropFirst()
-            .debounce(for: 0.8, scheduler: RunLoop.main)
+            .debounce(for: 0.4, scheduler: RunLoop.main)
             .removeDuplicates()
             .map { phoneNumber in
                 if !Validation.isValidMobileNumber(phoneNumber) {
@@ -108,7 +108,7 @@ extension RegisterViewModel {
         
         $fullName
             .dropFirst()
-            .debounce(for: 0.8, scheduler: RunLoop.main)
+            .debounce(for: 0.4, scheduler: RunLoop.main)
             .removeDuplicates()
             .map { fullName in
                 if !Validation.isValidUsername(fullName) {
@@ -134,7 +134,7 @@ extension RegisterViewModel {
         do{
             let result = try await Auth.auth().createUser(withEmail: email, password: userPassword)
             self.userSession = result.user
-            let user = User(id: result.user.uid, fullName: fullName, email: email, phoneNumber: phoneNumber, role: .user)
+            let user = User(id: result.user.uid, fullName: fullName, email: email, phoneNumber: phoneNumber, image: "", role: .user, country: selectedCountry, countryCode: countryCode)
             let encodedUser = try Firestore.Encoder().encode(user)
             try await Firestore.firestore().collection("users").document(user.id).setData(encodedUser)
             await fetchUser()

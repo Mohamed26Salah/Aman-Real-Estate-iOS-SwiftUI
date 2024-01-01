@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct RegisterView: View {
-    @State var countryCode: String = ""
-    
+//    @State var countryCode: String = ""
+//    @State var country: String = ""
+    @State var countryFlagCode: String = "eg"
     @EnvironmentObject private var sessionManager: SessionManager
     @EnvironmentObject private var coordinator: AuthCoordinator
     @StateObject var registerViewModel: RegisterViewModel
@@ -64,17 +65,17 @@ struct RegisterView: View {
                     }
                     HStack(spacing: 16) {
                         HStack {
-                            Image(SystemDesign.AppImages.eg.name)
+                            Image(countryFlagCode)
                                 .resizable()
                                 .frame(width: 27, height: 20)
-                            Text("+20")
+                            Text(registerViewModel.countryCode)
                                 .applyLabelStyle(style: .BodyMediumMedium, color: .neutrals900)
                         }
                         .padding(17)
                         .background(SystemDesign.AppColors.Neutrals100.color)
                         .cornerRadius(8)
                         .onTapGesture {
-                            coordinator.present(sheet: .countryCodes(countryCode: $countryCode))
+                            coordinator.present(sheet: .countryCodes(countryFlagCode: $countryFlagCode, countryCode: $registerViewModel.countryCode, selectedCountry: $registerViewModel.selectedCountry))
                         }
                         CustomTextField(
                             keyboardContentType: .telephoneNumber,
@@ -235,7 +236,7 @@ struct RegisterView: View {
                     .scaleEffect(3)
             }
         }
-        .onChange(of: registerViewModel.userSession, perform: { _ in
+        .onChange(of: registerViewModel.currentUser, {
             sessionManager.userSession = registerViewModel.userSession
             sessionManager.currentUser = registerViewModel.currentUser
         })

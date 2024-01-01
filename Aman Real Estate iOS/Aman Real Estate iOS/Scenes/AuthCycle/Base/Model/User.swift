@@ -7,15 +7,18 @@
 
 import Foundation
 
-struct User: Identifiable, Codable {
+struct User: Identifiable, Codable, Equatable {
     let id: String
     let fullName: String
     let email: String
     let phoneNumber: String
+    let image: String
     let role: Role
+    let country: String
+    let countryCode: String
 }
 extension User {
-    static var MOCK_USER = User(id: NSUUID().uuidString, fullName: "Mock Name", email: "Mock@gmail.com", phoneNumber: "01097262974", role: .user)
+    static var MOCK_USER = User(id: NSUUID().uuidString, fullName: "Mock Name", email: "Mock@gmail.com", phoneNumber: "01097262974", image: "", role: .user, country: "Egypt", countryCode: "20")
 }
 
 enum Role: String, Codable {

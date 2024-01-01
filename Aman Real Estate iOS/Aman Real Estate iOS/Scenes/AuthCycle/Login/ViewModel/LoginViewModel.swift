@@ -14,9 +14,6 @@ import Combine
 
 class LoginViewModel: BaseAuthViewModel {
     
-//    @Published var userSession: FirebaseAuth.User?
-//    @Published var currentUser: User?
-    
     @Published var email: String = ""
     @Published var isEmailValid: Bool = false
     @Published var isEmailValidErrorMessage: String = ""
@@ -26,9 +23,7 @@ class LoginViewModel: BaseAuthViewModel {
     @Published var isUserPasswordValid: Bool = false
     @Published var isUserPasswordValidErrorMessage: String = ""
     @Published var showUserPassswordErrorMessage: CGFloat = 0.0
-    
-//    @Published var countryCodes: String = ""
-    
+        
     nonisolated
     override init() {
         super.init()
@@ -43,7 +38,7 @@ extension LoginViewModel {
     func realTimeValidation() {
         $email
             .dropFirst()
-            .debounce(for: 0.8, scheduler: RunLoop.main)
+            .debounce(for: 0.4, scheduler: RunLoop.main)
             .removeDuplicates()
             .map { email in
                 if !Validation.isValidEmail(email) {
@@ -60,7 +55,7 @@ extension LoginViewModel {
         
         $userPassword
             .dropFirst()
-            .debounce(for: 0.8, scheduler: RunLoop.main)
+            .debounce(for: 0.4, scheduler: RunLoop.main)
             .removeDuplicates()
             .map { password in
                 if !Validation.isPasswordValid(password) {

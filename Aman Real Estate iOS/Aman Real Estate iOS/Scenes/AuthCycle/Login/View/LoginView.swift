@@ -139,7 +139,7 @@ struct LoginView: View {
                     .scaleEffect(3)
             }
         }
-        .onChange(of: loginViewModel.userSession, {
+        .onChange(of: loginViewModel.currentUser, {
             sessionManager.userSession = loginViewModel.userSession
             sessionManager.currentUser = loginViewModel.currentUser
         })

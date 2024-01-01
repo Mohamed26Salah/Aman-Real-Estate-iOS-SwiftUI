@@ -10,8 +10,10 @@ import SwiftUI
 struct CountryCodesView: View {
     @ObservedObject var countryCodesViewModel = CountryCodesViewModel()
     @EnvironmentObject private var coordinator: AuthCoordinator
-    @Binding var countryCode: String
     
+    @Binding var countryFlagCode: String
+    @Binding var countryCode: String
+    @Binding var selectedCountry: String
     var body: some View {
         VStack {
             Rectangle()
@@ -54,8 +56,9 @@ struct CountryCodesView: View {
                 }
                 .listRowSeparator(.hidden)
                 .onTapGesture {
-//                    selectedCountry = country
-                    countryCode = country.code
+                    countryFlagCode = country.code
+                    countryCode = country.dialCode
+                    selectedCountry = country.name
                     coordinator.dismissSheet()
                 }
             }

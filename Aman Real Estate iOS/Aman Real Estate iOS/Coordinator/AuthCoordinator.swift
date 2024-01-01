@@ -15,12 +15,7 @@ enum AuthPage: Hashable, Equatable {
 }
 
 enum AuthSheet: Identifiable, Equatable {
-    
-    static func == (lhs: AuthSheet, rhs: AuthSheet) -> Bool {
-        return lhs.id == rhs.id
-    }
-    
-    case countryCodes(countryCode: Binding<String>)
+    case countryCodes(countryFlagCode: Binding<String>, countryCode: Binding<String>, selectedCountry: Binding<String>)
     
     var id: String {
         switch self {
@@ -28,6 +23,9 @@ enum AuthSheet: Identifiable, Equatable {
             return "countryCodes"
             // Add other cases as needed
         }
+    }
+    static func == (lhs: AuthSheet, rhs: AuthSheet) -> Bool {
+        return lhs.id == rhs.id
     }
 }
 
@@ -58,8 +56,8 @@ class AuthCoordinator: GenericCoordinator<AuthPage, AuthSheet, AuthFullScreenCov
     @ViewBuilder
     func build(sheet: AuthSheet) -> some View {
         switch sheet {
-        case .countryCodes(let countryCode):
-            CountryCodesView(countryCode: countryCode)
+        case .countryCodes(let countryFlagCode, let countryCode, let selectedCountry):
+            CountryCodesView(countryFlagCode: countryFlagCode, countryCode: countryCode, selectedCountry: selectedCountry)
         }
     }
     

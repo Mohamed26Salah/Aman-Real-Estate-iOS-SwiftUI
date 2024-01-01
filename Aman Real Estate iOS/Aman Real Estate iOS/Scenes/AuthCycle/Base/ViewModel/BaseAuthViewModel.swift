@@ -28,6 +28,6 @@ class BaseAuthViewModel: ObservableObject {
 
 //MARK: - Common Local Calls -
 extension BaseAuthViewModel {
-
+    
 }
 

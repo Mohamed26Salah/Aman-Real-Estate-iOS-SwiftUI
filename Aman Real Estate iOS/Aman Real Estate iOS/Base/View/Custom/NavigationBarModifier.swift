@@ -18,11 +18,11 @@ struct NavigationBarModifier: ViewModifier {
                     Button {
                         self.presentationMode.wrappedValue.dismiss()
                     } label: {
-                        Image(systemName: "arrow.backward") // Use your own image here
+                        Image(systemName: "arrow.backward")
                             .aspectRatio(contentMode: .fit)
-                            .foregroundColor(.neutrals900) // Your desired color
+                            .foregroundColor(.neutrals900)
                             .frame(width: 40, height: 40)
-                            .background(.neutrals100) // Your desired color
+                            .background(.neutrals100)
                             .clipShape(Circle())
                     }
                 }

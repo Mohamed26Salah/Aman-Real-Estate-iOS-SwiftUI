@@ -22,12 +22,8 @@ struct InitView: View {
                 OnBoardingView(isPresented: $isOnBoardingViewPresented)
             } else {
                 if sessionManager.userSession != nil {
-                    Text("Your Are Logged In")
-                    Button(action: {
-                        sessionManager.signOut()
-                    }, label: {
-                        Text("LogOut")
-                    })
+                    NavigationBarView()
+                        .environmentObject(sessionManager)
                 } else {
                     AuthCoordinatorView()
                         .environmentObject(sessionManager)

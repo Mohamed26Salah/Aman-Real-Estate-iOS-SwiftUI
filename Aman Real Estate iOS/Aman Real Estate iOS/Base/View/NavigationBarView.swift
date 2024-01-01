@@ -34,7 +34,7 @@ struct NavigationBarView: View {
                         Label(Tab.Message.rawValue, image: selectedTap == .Message ? SystemDesign.AppImages.MessageFilled.name : SystemDesign.AppImages.Message.name)
                     }
                     .tag(Tab.Message)
-                Text(Tab.Account.rawValue)
+                ProfileCoordinatorView()
                     .tabItem {
                         Label(Tab.Account.rawValue, image: selectedTap == .Account ? SystemDesign.AppImages.AccountFilled.name : SystemDesign.AppImages.Account.name)
                     }
