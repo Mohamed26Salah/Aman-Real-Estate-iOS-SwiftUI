@@ -7,22 +7,22 @@
 
 import SwiftUI
 
-extension Font {
-    public enum SFProDisplay: String {
-        case regular = "SF Pro Display Regular"
-        case medium = "SF Pro Display Medium"
-        case semibold = "SF Pro Display Semibold"
-        case bold = "SF Pro Display Bold"
-        
-        public var name: String {
-            return self.rawValue
-        }
-        
-        public func size(_ size: CGFloat) -> Font {
-            return .custom(self.name, size: size)
-        }
-    }
-}
+//extension Font {
+//    public enum SFProDisplay: String {
+//        case regular = "SF Pro Display Regular"
+//        case medium = "SF Pro Display Medium"
+//        case semibold = "SF Pro Display Semibold"
+//        case bold = "SF Pro Display Bold"
+//        
+//        public var name: String {
+//            return self.rawValue
+//        }
+//        
+//        public func size(_ size: CGFloat) -> Font {
+//            return .custom(self.name, size: size)
+//        }
+//    }
+//}
 
 public enum LabelStyle {
     case Heading1

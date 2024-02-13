@@ -1,19 +1,19 @@
 //
-//  ProfileCoordinator.swift
+//  HomeCoordiantorView.swift
 //  Aman Real Estate iOS
 //
-//  Created by Mohamed Salah on 26/12/2023.
+//  Created by Mohamed Salah on 13/02/2024.
 //
 
 import SwiftUI
 
-struct ProfileCoordinatorView: View {
-    @StateObject private var coordinator = ProfileCoordinator()
+struct HomeCoordiantorView: View {
+    @StateObject private var coordinator = HomeCoordinator()
 
     var body: some View {
         NavigationStack(path: $coordinator.path) {
-            coordinator.build(page: .profile)
-                .navigationDestination(for: ProfilePage.self) { page in
+            coordinator.build(page: .home)
+                .navigationDestination(for: HomePage.self) { page in
                     coordinator.build(page: page)
                 }
                 .sheet(item: $coordinator.sheet) { sheet in
@@ -26,8 +26,3 @@ struct ProfileCoordinatorView: View {
         .environmentObject(coordinator)
     }
 }
-
-//#Preview {
-//    ProfileCoordinatorView()
-//}
-

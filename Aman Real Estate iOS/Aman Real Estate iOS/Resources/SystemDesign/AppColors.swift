@@ -32,5 +32,8 @@ extension SystemDesign {
         var color: Color {
             return Color(self.rawValue)
         }
+        var uiColor: UIColor {
+            return UIColor(named: self.rawValue) ?? UIColor.systemBackground // Set default color here
+        }
     }
 }

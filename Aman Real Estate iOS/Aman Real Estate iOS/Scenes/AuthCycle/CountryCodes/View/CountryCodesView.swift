@@ -39,7 +39,7 @@ struct CountryCodesView: View {
                 })
                 
             }
-            SearchBar(searchText: $countryCodesViewModel.query)
+            SearchBar(placeHolder: "Search country code", searchText: $countryCodesViewModel.query)
                 .padding(16)
             List(countryCodesViewModel.countryCodes, id: \.name) { country in
                 HStack {
@@ -73,6 +73,7 @@ struct CountryCodesView: View {
 //}
 
 struct SearchBar: View {
+    var placeHolder: String
     @Binding var searchText: String
     var body: some View {
         HStack {
@@ -82,7 +83,7 @@ struct SearchBar: View {
                     .foregroundColor(.neutrals900)
                     .padding()
                 TextField(text: $searchText) {
-                    Text("Search country code")
+                    Text(placeHolder)
                         .applyLabelStyle(style: .BodyMediumRegular, color: .neutrals600)
                 }
                 .frame(height: 50)

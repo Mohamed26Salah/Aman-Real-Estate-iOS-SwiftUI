@@ -15,6 +15,7 @@ extension SystemDesign {
         case FirstHouseOnBoarding, SecondHouseOnBoarding, ThirdHouseOnBoarding
         case eg, AppLogoBlue500, AppLogoBlue400, AppLogoNeutrals400, AppLogoNeutrals500
         case Home, HomeFilled, Account, AccountFilled, Message, MessageFilled, Favorite, FavoriteFilled
+        case bell, shieldDone
         
         //return name of image
         var name: String {

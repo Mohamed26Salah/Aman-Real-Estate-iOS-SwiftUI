@@ -22,6 +22,7 @@ struct InitView: View {
                 OnBoardingView(isPresented: $isOnBoardingViewPresented)
             } else {
                 if sessionManager.userSession != nil {
+//                    Test()
                     NavigationBarView()
                         .environmentObject(sessionManager)
                 } else {

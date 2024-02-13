@@ -19,7 +19,7 @@ struct NavigationBarView: View {
     var body: some View {
         ZStack {
             TabView(selection: $selectedTap) {
-                Text(Tab.Explore.rawValue)
+                HomeCoordiantorView()
                     .tabItem {
                         Label(Tab.Explore.rawValue, image: selectedTap == .Explore ? SystemDesign.AppImages.HomeFilled.name : SystemDesign.AppImages.Home.name)
                     }

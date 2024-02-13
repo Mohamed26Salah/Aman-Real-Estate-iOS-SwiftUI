@@ -12,6 +12,7 @@ struct OnBoardingView: View {
     @State private var isFlattenedSecondCircle: Bool = false
     @State private var isFlattenedThirdCircle: Bool = false
     @State private var currentPageNum = 0
+    var salah: [String] = []
     @Binding var isPresented: Bool
     
     var firstTextArray: [String] =
